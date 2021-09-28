@@ -1,0 +1,21 @@
+﻿@typeparam TModel
+@typeparam TValue
+
+@using Radzen.Blazor
+@using System.Linq
+
+@inherits VyprCore.RazorComponents.Base.VyprDataGridBase<TModel>
+
+<RadzenDropDownDataGrid TValue="IEnumerable<TValue>" Count="@Count" Data="@DataSource" @bind-Value="@SelectedItems" Multiple="@UseMultiselect" TextProperty="@DisplayProperty" ValueProperty="@ValueProperty" AllowFiltering="@AllowFiltering" AllowSorting="@AllowSorting" AllowClear="true" PageSize="@PageSize" AllowFilteringByAllStringColumns="true" FilterDelay="1">
+    <Columns>
+        @if (UseMultiselect)
+                {
+        <RadzenDropDownDataGridColumn Width="40px" Sortable="false" Filterable="false">
+            <Template Context="data">
+                <RadzenCheckBox TriState="true" Value="@(SelectedItems?.Any(si => data.GetType().GetProperty(ValueProperty).GetValue(data, null) == si) ?? false)" />
+            </Template>
+        </RadzenDropDownDataGridColumn>
+        }
+        <RadzenDropDownDataGridColumn Property="@DisplayProperty" Filterable="true" />
+    </Columns>
+</RadzenDropDownDataGrid>

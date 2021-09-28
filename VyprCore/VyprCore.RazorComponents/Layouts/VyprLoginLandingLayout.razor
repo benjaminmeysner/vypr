@@ -1,0 +1,34 @@
+﻿@inherits VyprCore.RazorComponents.Base.VyprLayoutBase
+
+@using VyprCore.RazorComponents.Pages
+@using VyprCore.RazorComponents.PageElements 
+
+@if (!AlreadyLoggedIn)
+{
+    <CascadingValue Value="@this">
+        <div class="container-fluid">
+            <div class="row login-landing-page-row no-gutter">
+                <!-- The content half -->
+            <div class="col-md-6 vypr-col-login">
+                    @if (PageState.CanGoBack())
+                    {
+                        <div class="vypr-back-button">
+                            <VyprIcon Click=@(() => NavigationManager.NavigateTo(PageState.GetPreviousAsync().Result)) Icon="chevron_left" Class="go-back-icon" />
+                        </div>
+                    }
+                    <div class="login vypr-auth-page d-flex align-items-center">
+                        <div class="login-landing-rcontainer">
+                            <div class="company-landing-logo" />
+
+                            @Body
+
+                            <div class="landing-footer">
+                                <VyprFooter />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </CascadingValue>
+}

@@ -1,0 +1,82 @@
+﻿// <copyright file="_razorcomponents_buttons.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+@import "_vyprcore_razorcomponents_vars.scss";
+
+.vypr-validation-results {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        display: inline;
+
+        &.error {
+            i {
+                font-size: 1.2em;
+                margin-left: 3px;
+                margin-right: 3px;
+                color: #ff5483;
+            }
+        }
+
+        &.success {
+            i {
+                font-size: 1.2em;
+                margin-left: 3px;
+                margin-right: 3px;
+                color: green;
+            }
+        }
+    }
+}
+
+.vypr-loginlandinglinks {
+    display: flex;
+    justify-content: flex-end;
+    background: white;
+    padding: 1.5rem;
+    margin-top: -4.25rem; // Sit back as part of the form background
+    margin-bottom: 1.5rem;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
+    a {
+        margin-left: 1rem;
+    }
+}
+
+.validation-message {
+    margin-bottom: $ComponentSpacing;
+    display: flex !important;
+    margin-top: -10px;
+    line-height: 1.5rem;
+    color: #ff477b;
+
+    &:before {
+        content: '\e001';
+    }
+
+    &.success {
+        color: #92cb1d;
+
+        &:before {
+            content: '\e86c';
+        }
+    }
+}
+
+.validation-message:before {
+    font-size: 1.2rem;
+    margin-left: 3px;
+    margin-right: 6px;
+    padding-top: 1px;
+    vertical-align: middle;
+    font-family: 'Material Icons';
+}
+
+.vypr-loginheader {
+    text-align: center;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}

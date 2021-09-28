@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Radzen.Blazor
+
+<div class="vypr-profiledisplay">
+    <AuthorizeView>
+        <Authorized>
+            <RadzenProfileMenu>
+                <Template>
+                    <VyprGravatar EmailHash=@_userNameHash>
+                    </VyprGravatar>
+                    <span class="profile-username">@_userName</span>
+                </Template>
+                <ChildContent>
+                    <RadzenProfileMenuItem Path="logout" Text="Log out" Icon="logout"></RadzenProfileMenuItem>
+                </ChildContent>
+            </RadzenProfileMenu>
+        </Authorized>
+        <!-- no unauthorized case! presumed the user is logged in. -->
+    </AuthorizeView>
+</div>

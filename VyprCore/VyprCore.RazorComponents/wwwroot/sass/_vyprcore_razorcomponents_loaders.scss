@@ -1,0 +1,23 @@
+﻿// <copyright file="_razorcomponents_loaders.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+@import "_vyprcore_razorcomponents_vars.scss";
+
+.vypr-spinner {
+    margin-left: $ComponentSpacing * 2;
+    margin-right: $ComponentSpacing * 2;
+}
+
+.vypr-spinner {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: calc(50% - 30px);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    img {
+        width: 60px;
+        height: 60px;
+    }
+}

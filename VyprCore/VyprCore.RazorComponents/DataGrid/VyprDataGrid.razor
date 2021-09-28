@@ -1,0 +1,39 @@
+﻿@typeparam TModel
+
+@using Radzen
+@using Radzen.Blazor
+@using VyprCore.RazorComponents.Helpers
+@using VyprCore.RazorComponents.Forms 
+@using System.Threading
+
+@inherits VyprCore.RazorComponents.Base.VyprDataGridBase<TModel>
+
+<div class="@Class">
+    @if (SelectionMode is null)
+    {
+        <RadzenDataGrid @ref=@GridInternal TItem="TModel" EmptyText=@EmptyText IsLoading=@(DataLoading) Count="@Count" Data="@DataSource" LoadData=@OnLoadDataAsync AllowSorting="@AllowSorting" AllowPaging="@AllowPaging" AllowFiltering="@AllowFiltering" PageSize="@PageSize" Visible="@IsVisible" ColumnWidth="200px" Style=@InLineStyle>
+            <Columns>
+                @ChildContent
+            </Columns>
+        </RadzenDataGrid>
+    }
+    else
+    {
+        <RadzenDataGrid @ref=@GridInternal TItem="TModel" EmptyText=@EmptyText IsLoading=@(DataLoading) Count="@Count" Data="@DataSource" LoadData=@OnLoadDataAsync SelectionMode=@VyprComponentHelpers.VyprDataGridSelectionModeToRadzen(SelectionMode.Value) AllowSorting="@AllowSorting" AllowPaging="@AllowPaging" AllowFiltering="@AllowFiltering" PageSize="@PageSize" Visible="@IsVisible" @bind-Value=@SelectedRowModels Style=@InLineStyle ColumnWidth="200px">
+            <Columns>
+                @ChildContent
+            </Columns>
+        </RadzenDataGrid>
+    }
+    @if (UsePageSizeFooter)
+    {
+        <div class="vypr-datagrid-pagerfooter">
+            <div class="vypr-datagrid-pagerfootersection" style="padding-top: 10px;">
+                <p>Page Size</p>    
+            </div>
+            <div class="vypr-datagrid-pagerfootersection" style="width: 50px !important;">
+                <RadzenDropDown @bind-Value=@PageSize Data=@PageValues TextProperty="Key" ValueProperty="Value" AllowClear=@false AllowFiltering=@false />
+            </div>
+        </div>
+    }
+</div>

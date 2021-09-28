@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="4.1.2" />
+    <PackageReference Include="FluentValidation" Version="10.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Remote.Linq.EntityFramework" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VyprCore.Interfaces\VyprCore.Interfaces.csproj" />
+    <ProjectReference Include="..\VyprCore.Models\VyprCore.Models.csproj" />
+    <ProjectReference Include="..\VyprCore.Utilities\VyprCore.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,16 @@
+﻿@inherits VyprCore.RazorComponents.Base.VyprFormComponentBase<bool>
+
+@using Radzen.Blazor
+@if (!InGrid)
+{
+    <div class="vypr-rz-componentwrapper">
+        <div class="vypr-rz-componentcol-lg">
+            @LabelRenderTree
+            <RadzenCheckBox id=@ComponentId Name=@ComponentId TValue=@bool @bind-Value=@Value Disabled=@IsReadOnly Visible=@IsVisible class="vypr-rcomp-checkbox" />
+        </div>
+    </div>
+}
+else
+{
+    <RadzenCheckBox id=@ComponentId Name=@ComponentId TValue=@bool Change=@Change @bind-Value=@Value Disabled=@IsReadOnly Visible=@IsVisible class="vypr-rcomp-checkbox" />
+}

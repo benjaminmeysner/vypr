@@ -1,0 +1,66 @@
+﻿@attribute [Microsoft.AspNetCore.Authorization.Authorize]
+@inherits LayoutComponentBase
+
+@using VyprCore.Models.Resources
+@using VyprCore.RazorComponents.Loaders
+@using VyprCore.RazorComponents.PageElements
+@using VyprCore.RazorComponents.Notifications
+
+<CascadingValue Value="@this">
+    <VyprDialog />
+    <VyprToast />
+    <VyprToolTip />
+    <VyprPageSpinner Overlay=@true @bind-ShowSpinner=@ShowSpinnerOverlay />
+    <div class="page">
+        <div class="sidebar @(_showMenuSlideOut ? "nav-collapse" : string.Empty)">
+            <MainNavMenu Change=@(x => NavTarget = x)/>
+            <!-- Vypr Gravatar - need to get user here -->
+            <div class="sidebar-quick-profile">
+                <img class="vypr-gravatar rz-gravatar" src="https://secure.gravatar.com/avatar/8c8bc578c0fe93c50a7ab3eebdd0b422?d=retro&amp;s=36">
+            </div>
+        </div>
+        @if (NavTarget != Enums.MenuNavTarget.Dashboard)
+        {
+            <div class="sidebar-ext @(_showMenuSlideOut ? "nav-collapse" : string.Empty)">
+                <MainNavExt NavTarget=@NavTarget/>
+            </div>
+        }
+
+        <div class="main @(_showMenuSlideOut ? "narrow" : string.Empty)">
+            <div class="sticky-top">
+                <div class="top-menu">
+                    <div class="top-row auth @(_displayDevBanner || !(_connectionStatus?.IsOnline ?? true) ? "noborderbottom" : "")" style="padding-left: 0 !important;">
+                        <a @onclick=@ToggleMenuSlideOut class="menu-slide-button noselect @(_showMenuSlideOut ? "nav-flip-anim" : string.Empty)">
+                            <span class="material-icons" style="vertical-align: middle;" aria-hidden="true" b-b9cxtswmk5="">menu_open</span>
+                        </a>
+                        <VyprProfileDisplay />
+                    </div>
+                    @if (_displayDevBanner)
+                    {
+                        <div class="header-warning header-warning-banner">
+                            <div class="container-fluid">
+                                <VyprIcon Icon="build"/><span class="header-warning-banner-message">@string.Format(StandardText.DevelopmentBanner, _environment)</span>                              
+                            </div>
+                        </div>
+                    }
+                    <VyprConnectionStatus @ref=@_connectionStatus>
+                        <Offline>
+                            <div class="header-warning header-warning-banner connection-status">
+                                <div class="container-fluid">
+                                    <VyprIcon Icon="do_disturb_alt"/><span class="header-warning-banner-message">@StandardText.ApplicationRunningOffline</span>                              
+                                </div>
+                            </div>
+                        </Offline>
+                        <Online></Online>
+                    </VyprConnectionStatus>
+                </div>
+            </div>
+            <div class="content">
+                @Body
+            </div>
+            <div class="footer">
+                &#169 @DateTime.Now.Year Ninjas In Pyjamas
+            </div>
+        </div>
+    </div>
+</CascadingValue>

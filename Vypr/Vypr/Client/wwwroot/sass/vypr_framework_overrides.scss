@@ -1,0 +1,394 @@
+﻿// <copyright file="vypr_framework_overrides.scss" company="Vypr Systems" >
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright >
+
+@import "vypr_vars.scss";
+
+.rz-datatable-loading-content .rzi-circle-o-notch {
+    color: $VyprMidnightBlue;
+}
+
+.vypr-datagrid-exportoptions,
+.vypr-datagrid-crudoptions {
+    border-top: 1px solid #dadfe2;
+    border-right: 1px solid #dadfe2;
+    background: #f5fafb;
+}
+
+.rz-datatable-thead th:not(:last-child),
+.rz-grid-table thead th:not(:last-child) {
+    border-right: solid 1px $VyprMainBorderColour;
+}
+
+.rz-datatable-odd > td {
+    background-color: transparent;
+}
+
+.rz-selectable .rz-datatable-even.rz-state-highlight > td,
+.rz-selectable .rz-datatable-odd.rz-state-highlight > td {
+    background-color: #90a9a8;
+    border-right: solid 1px #93a4a3;
+}
+
+ul.rz-profile-menu .rz-navigation-menu .rz-navigation-item-wrapper:hover,
+.rz-datatable-thead th, .rz-grid-table thead th,
+.rz-paginator-page.rz-state-active,
+.rz-paginator-last, .rz-paginator-next,
+.btn-info, .btn-info.rz-paginator-element,
+.btn-primary, .btn-primary.rz-paginator-element {
+    background-color: transparent;
+}
+
+.btn-secondary, .btn-secondary.rz-paginator-element {
+    background-color: $VyprAqua;
+}
+
+.btn-danger, .btn-danger.rz-paginator-element {
+    background-color: $VyprRed;
+}
+
+.rz-tabview-nav .rz-tabview-selected {
+    border-top: 2px solid $VyprGrey;
+}
+
+.rz-chkbox-box.rz-state-active {
+    background-color: $VyprGreen;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.rz-chkbox-box {
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.rz-chkbox-box.rz-state-active:hover {
+    background-color: #8bc73b;
+    filter: brightness(0.90);
+}
+
+.rz-tabview-nav li {
+    background-color: $VyprLightGrey;
+}
+
+.rz-button {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    @include BMSButtonBorderRadius;
+}
+
+.vypr-btn {
+    height: 3rem;
+
+    i.rz-button-icon-left.rzi {
+        width: 1.75rem;
+    }
+}
+
+.rz-dropdown-item:hover, 
+.rz-menuitem:hover,
+.rz-autocomplete-list-item:hover,
+.rz-multiselect-item:hover,
+.rz-dropdown-items li:hover,
+.rz-autocomplete-items li:hover, 
+.rz-multiselect-items li:hover {
+    background-color: #edf4f5;
+    color: $VyprMidnightBlue;
+}
+
+h3 {
+    font-weight: 600 !important;
+}
+
+.rzi {
+    // Override icon size for app
+    font-size: 1.35rem;
+}
+
+.rz-datatable-data td .rz-cell-data,
+.rz-grid-table td .rz-cell-data {
+    font-size: 0.925rem !important;
+}
+
+.trip-filters .rz-button.rz-state-active, .view-trip-filters .rz-button.rz-state-active,
+.rz-selectbutton .rz-button:last-child, .rz-selectbutton .rz-paginator-element:last-child,
+.rz-selectbutton .rz-button:first-child, .rz-selectbutton .rz-paginator-element:first-child {
+    line-height: 35px;
+}
+
+.rz-dropdown-item.rz-state-highlight,
+.rz-state-highlight.rz-menuitem,
+.rz-state-highlight.rz-autocomplete-list-item,
+.rz-state-highlight.rz-multiselect-item,
+.rz-dropdown-items li.rz-state-highlight,
+.rz-autocomplete-items li.rz-state-highlight,
+.rz-multiselect-items li.rz-state-highlight {
+    background-color: #ffffff;
+    color: $VyprDarkGrey;
+}
+
+ul.rz-profile-menu {
+    margin-bottom: 0px !important;
+    height: 60px;
+}
+
+.rz-card h1, .rz-card h2, .rz-card h3, .rz-card h4, .rz-card h5, .rz-card h6 {
+    margin-bottom: $StandardMargin;
+}
+
+.rz-dropdown-item.rz-state-highlight, .rz-state-highlight.rz-menuitem, .rz-state-highlight.rz-autocomplete-list-item, .rz-state-highlight.rz-multiselect-item, .rz-dropdown-items li.rz-state-highlight, .rz-autocomplete-items li.rz-state-highlight, .rz-multiselect-items li.rz-state-highlight {
+    background-color: #edf4f5;
+    color: #342c48;
+}
+
+.rz-tabview-panels {
+    overflow: initial;
+}
+
+ul.rz-profile-menu .rz-navigation-item-icon-children {
+    color: #838383;
+}
+
+.rz-tabview-nav li {
+    background-color: #e6ecef;
+}
+
+.rz-tabview-nav li:hover:not(.rz-tabview-selected):not(.rz-state-disabled) {
+    background-color: #f8f8f8;
+    border-top: solid 1px #ccc;
+}
+
+.rz-tabview-nav li:hover:not(.rz-tabview-selected):not(.rz-state-disabled) a {
+    color: #404040;
+}
+
+.rz-datatable-tfoot td,
+.rz-grid-table tfoot td {
+    background-color: transparent;
+}
+
+// Form overrides...
+.vypr-invalid-field:not([id^='VyprDatePicker']):not([id^='VyprCheckBox']),
+.vypr-invalid-field:hover:not(focus):not([id^='VypratePicker']):not([id^='VyprCheckBox']) {
+    @include BMSButtonBorderRadius;
+}
+
+.rz-colorpicker, .rz-lookup-search input, .rz-spinner, .rz-calendar .rz-inputtext, .rz-multiselect, .rz-dropdown, .mask, .rz-textarea, .rz-textbox {
+    border-radius: unset;
+    background: transparent;
+    @include BMSButtonBorderRadius;
+}
+
+:focus-visible {
+    outline: none;
+    border: 2px solid silver;
+    @include BMSButtonBorderRadius;
+}
+
+.vypr-auth-page .vypr-app-login,
+.vypr-auth-page .vypr-app-fp,
+.vypr-auth-page .vypr-app-cp,
+.vypr-auth-page .vypr-app-rp,
+.vypr-auth-page .vypr-app-ir,
+.vypr-auth-page .vypr-app-icp {
+    background: $VyprMidnightBlue !important;
+    color: white !important;
+    border-radius: 4px !important;
+    padding: $StandardContentPadding !important;
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 0px !important;
+
+    ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: white;
+        opacity: 1; /* Firefox */
+    }
+
+    .rz-colorpicker, .rz-lookup-search input, .rz-spinner, .rz-calendar .rz-inputtext, .rz-multiselect, .rz-dropdown, .mask, .rz-textarea, .rz-textbox {
+        color: white;
+    }
+}
+
+    .vypr-loginlandinglinks {
+        background: $VyprMidnightBlue;
+        color: white;
+        padding: $StandardContentPadding;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 12px;
+    }
+
+    .vypr-loginlandinglinks a:not([href]):not(.page) {
+        color: #ffffff !important;
+    }
+
+.rz-chkbox-box.rz-state-active.rz-state-disabled {
+    background-color: #c7e290;
+}
+
+.noborderbottom {
+    border-bottom: none !important;
+}
+
+.rz-tooltip-content {
+    padding: 0.35rem 1rem 0.35rem;
+    background: $VyprTooltipBackground;
+}
+
+.rz-tooltip .rz-right-tooltip-content:after {
+    width: 10px;
+    height: 10px;
+}
+
+
+.rz-datatable-thead .rzi,
+.rz-datatable-thead .rz-datatable-loading-content .rzi-circle-o-notch,
+.rz-datatable-loading-content .rz-datatable-thead .rzi-circle-o-notch,
+.rz-datatable-thead .rz-datatable-header .rzi-plus,
+.rz-datatable-header .rz-datatable-thead .rzi-plus,
+.rz-datatable-thead .rz-sortable-column .rzi-grid-sort,
+.rz-sortable-column .rz-datatable-thead .rzi-grid-sort,
+.rz-datatable-thead .rz-menuitem .rz-menuitem-icon,
+.rz-menuitem .rz-datatable-thead .rz-menuitem-icon,
+.rz-datatable-thead .rz-fileupload-row .rz-button .rzi-close,
+.rz-datatable-thead .rz-fileupload-row .rz-paginator-element .rzi-close,
+.rz-fileupload-row .rz-button .rz-datatable-thead .rzi-close,
+.rz-fileupload-row .rz-paginator-element .rz-datatable-thead .rzi-close,
+.rz-datatable-thead .rz-fileupload-row .rz-button .rzi-times,
+.rz-datatable-thead .rz-fileupload-row .rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-button .rz-datatable-thead .rzi-times,
+.rz-fileupload-row .rz-paginator-element .rz-datatable-thead .rzi-times,
+.rz-datatable-thead .rz-fileupload-row .rz-button .rz-icon-trash,
+.rz-datatable-thead .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-button .rz-datatable-thead .rz-icon-trash,
+.rz-fileupload-row .rz-paginator-element .rz-datatable-thead .rz-icon-trash,
+.rz-datatable-thead .rz-datatable .rzi-chevron-circle-right,
+.rz-datatable .rz-datatable-thead .rzi-chevron-circle-right,
+.rz-datatable-thead .rz-datatable .rzi-chevron-circle-down,
+.rz-datatable .rz-datatable-thead .rzi-chevron-circle-down,
+.rz-grid-table thead .rzi,
+.rz-grid-table thead .rz-datatable-loading-content .rzi-circle-o-notch,
+.rz-datatable-loading-content .rz-grid-table thead .rzi-circle-o-notch,
+.rz-grid-table thead .rz-datatable-header .rzi-plus,
+.rz-datatable-header .rz-grid-table thead .rzi-plus,
+.rz-grid-table thead .rz-sortable-column .rzi-grid-sort,
+.rz-sortable-column .rz-grid-table thead .rzi-grid-sort,
+.rz-grid-table thead .rz-menuitem .rz-menuitem-icon,
+.rz-menuitem .rz-grid-table thead .rz-menuitem-icon,
+.rz-grid-table thead .rz-fileupload-row .rz-button .rzi-close,
+.rz-grid-table thead .rz-fileupload-row .rz-paginator-element .rzi-close,
+.rz-fileupload-row .rz-button .rz-grid-table thead .rzi-close,
+.rz-fileupload-row .rz-paginator-element .rz-grid-table thead .rzi-close,
+.rz-grid-table thead .rz-fileupload-row .rz-button .rzi-times,
+.rz-grid-table thead .rz-fileupload-row .rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-button .rz-grid-table thead .rzi-times,
+.rz-fileupload-row .rz-paginator-element .rz-grid-table thead .rzi-times,
+.rz-grid-table thead .rz-fileupload-row .rz-button .rz-icon-trash,
+.rz-grid-table thead .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-button .rz-grid-table thead .rz-icon-trash,
+.rz-fileupload-row .rz-paginator-element .rz-grid-table thead .rz-icon-trash,
+.rz-grid-table thead .rz-datatable .rzi-chevron-circle-right,
+.rz-datatable .rz-grid-table thead .rzi-chevron-circle-right,
+.rz-grid-table thead .rz-datatable .rzi-chevron-circle-down,
+.rz-datatable .rz-grid-table thead .rzi-chevron-circle-down,
+.rz-datatable-thead th .rz-column-title,
+.rz-grid-table thead th .rz-column-title {
+    color: $VyprMainBodyFontColour;
+}
+
+.rz-datatable {
+    border: solid 1px $VyprMainBorderColour;
+}
+
+.rz-datatable-thead th:not(:last-child), .rz-grid-table thead th:not(:last-child),
+.rz-datatable-data td:not(:last-child), .rz-grid-table td:not(:last-child),
+.rz-datatable-tfoot td:not(:last-child), .rz-grid-table tfoot td:not(:last-child) {
+    border-right: none;
+}
+
+.rz-grid-filter-active {
+    color: #0b51b7 !important;
+}
+
+.rz-grid-table td, .rz-grid-table th {
+    padding: 1rem .5rem 1rem .5rem;
+}
+
+.rz-datatable-data td, .rz-grid-table td {
+    border-bottom: solid 1px $VyprMainBorderColour;
+}
+
+.rz-column-title {
+    font-family: 'Source Sans Pro Bold';
+}
+
+.rz-datatable-data tr:first-child td,
+.rz-grid-table tr:first-child td {
+    border-top: solid 1px #e8e8e8;
+}
+
+.rz-datatable-thead th .rz-column-title, .rz-grid-table thead th .rz-column-title {
+    padding: 1rem .5rem 1rem .5rem;
+}
+
+.rz-datatable-thead th,
+.rz-grid-table thead th {
+    padding: 0;
+}
+
+.rz-grid-filter-icon {
+    margin: 1rem .5rem 1rem 0;
+}
+
+.rz-selectable .rz-datatable-even.rz-state-highlight > td,
+.rz-selectable .rz-datatable-odd.rz-state-highlight > td {
+    background-color: $VyprOffWhite;
+    border-right: none;
+}
+
+.rz-selectable .rz-datatable-even.rz-state-highlight .rz-cell-data,
+.rz-selectable .rz-datatable-odd.rz-state-highlight .rz-cell-data {
+    color: inherit;
+}
+
+.rz-selectable .rz-datatable-even:hover:not(.rz-state-highlight) > td,
+.rz-selectable .rz-datatable-odd:hover:not(.rz-state-highlight) > td {
+    background-color: inherit;
+}
+
+.rz-paginator-page.rz-state-active {
+    color: inherit;
+}
+
+.rz-paginator-last,
+.rz-paginator-next,
+.btn-info,
+.btn-info.rz-paginator-element,
+.btn-primary,
+.btn-primary.rz-paginator-element {
+    color: inherit;
+    background: #e6ecef;
+}
+
+.rz-paginator-last:hover,
+.rz-paginator-next:hover {
+    color: inherit;
+}
+
+.rz-datatable-thead th .rz-column-title, .rz-grid-table thead th .rz-column-title {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.rz-splitter-horizontal > .rz-splitter-bar {
+    margin-left: $StandardMargin;
+    margin-right: $StandardMargin;
+}
+
+.rz-splitter > .rz-splitter-bar-resizable:active {
+    background-color: $VyprMidnightBlue;
+}
+
+@media (max-width: 1366px) {
+    .rz-data-grid {
+        max-width: inherit !important;
+    }
+}

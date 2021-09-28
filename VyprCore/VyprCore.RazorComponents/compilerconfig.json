@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/_vyprcore_razorcomponents.css",
+    "inputFile": "wwwroot/sass/_vyprcore_razorcomponents.scss"
+  },
+  {
+    "outputFile": "wwwroot/sass/_vyprcore_razorcomponents_elements.css",
+    "inputFile": "wwwroot/sass/_vyprcore_razorcomponents_elements.scss"
+  },
+  {
+    "outputFile": "wwwroot/sass/_vyprcore_radzen_overrides.css",
+    "inputFile": "wwwroot/sass/_vyprcore_radzen_overrides.scss"
+  },
+  {
+    "outputFile": "wwwroot/sass/_vyprcore_razorcomponents_notifications.css",
+    "inputFile": "wwwroot/sass/_vyprcore_razorcomponents_notifications.scss"
+  },
+  {
+    "outputFile": "wwwroot/sass/_vyprcore_razorcomponents_datagrid.css",
+    "inputFile": "wwwroot/sass/_vyprcore_razorcomponents_datagrid.scss"
+  },
+  {
+    "outputFile": "wwwroot/sass/_vyprcore_razorcomponents.css",
+    "inputFile": "wwwroot/sass/_vyprcore_razorcomponents.scss"
+  }
+]

@@ -1,0 +1,12 @@
+﻿@inject NavigationManager Navigation
+
+@code {
+    /// <summary>
+    /// Method invoked when the component is ready to start, having received its
+    /// initial parameters from its parent in the render tree.
+    /// </summary>
+    protected override void OnInitialized()
+    {
+        Navigation.NavigateTo($"error/404");
+    }
+}

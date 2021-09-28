@@ -1,0 +1,61 @@
+﻿@using VyprCore.Models.Resources 
+
+<div class="nav-menu @(Main.ShowMenuSlideOut ? "collapse-nav-menu" : string.Empty)">
+    <div class="top-row navbar navbar-brand navbar-dark">
+        <!-- TODO! Remove -->
+        <svg version="1.1" width="40px" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">	.st0{fill:#FFF226;}</style><g>	<g>		<g>			<g>				<path class="st0" d="M0,95.2l0-52.5L100,7.2l0,52.5L0,95.2z M2.2,44.2v47.9l95.6-33.9V10.3L2.2,44.2z"></path>			</g>		</g>	</g>	<g>		<g>			<g>				<polygon class="st0" points="7.2,48 7.2,84.9 20.7,80.1 20.7,43.2 				"></polygon>			</g>		</g>		<g>			<g>				<polygon class="st0" points="92.9,17.6 79.5,22.3 79.5,59.2 92.9,54.5 				"></polygon>			</g>		</g>		<g>			<g>				<polygon class="st0" points="46,34.2 32.7,38.9 32.7,52 46,69 				"></polygon>			</g>		</g>		<g>			<g>				<polygon class="st0" points="77.2,23.1 63.8,27.9 63.8,41 77.2,57.9 				"></polygon>			</g>		</g>		<g>			<g>				<polygon class="st0" points="23,65.4 31.5,76.2 45,71.4 23,43.8 				"></polygon>			</g>		</g>		<g>			<g>				<polygon class="st0" points="48.4,33.3 48.4,47.1 53.6,53.7 48.4,55.6 48.4,65.3 59.6,61.3 62.6,65.1 76.2,60.4 53.4,31.6 									"></polygon>			</g>		</g>	</g></g></svg>
+    </div>
+
+    <div class="nav-container">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link @(_target is Enums.MenuNavTarget.Dashboard ? "active" : "")" href="view/dashboard" @onmousedown=@(() => OnMainMenuItemClicked(Client.Enums.MenuNavTarget.Dashboard))>
+                    <span @ref=@_dashboardRef class="material-icons-round nav-item-icon" aria-hidden="true" @onmouseover=@(args => ToolTipService.Open(_dashboardRef, @StandardText.Dashboard, new ToolTipPosition { Position = 3 }))>dashboard_customize</span>
+                    <span class="@(Main.ShowMenuSlideOut ? "collapse-nav-text" : "nav-text")"><b>@StandardText.Dashboard</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(_target is Enums.MenuNavTarget.Bulletins ? "active" : "")" href="view/bulletins" @onmousedown=@(() => OnMainMenuItemClicked(Client.Enums.MenuNavTarget.Bulletins))>
+                    <span @ref=@_bulletinsRef  class="material-icons-round nav-item-icon" aria-hidden="true" @onmouseover=@(args => ToolTipService.Open(_bulletinsRef, @StandardText.Bulletins, new ToolTipPosition { Position = 3 }))>list_alt</span>
+                    <span class="@(Main.ShowMenuSlideOut ? "collapse-nav-text" : "nav-text")"><b>@StandardText.Bulletins</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(_target is Enums.MenuNavTarget.Teams ? "active" : "")" href="view/users" @onmousedown=@(() => OnMainMenuItemClicked(Client.Enums.MenuNavTarget.Teams))>
+                    <span @ref=@_teamsRef  class="material-icons-round nav-item-icon" aria-hidden="true" @onmouseover=@(args => ToolTipService.Open(_teamsRef, @StandardText.Teams, new ToolTipPosition { Position = 3 }))>people</span>
+                    <span class="@(Main.ShowMenuSlideOut ? "collapse-nav-text" : "nav-text")"><b>@StandardText.Teams</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(_target is Enums.MenuNavTarget.Calendar ? "active" : "")" href="view/calendar" @onmousedown=@(() => OnMainMenuItemClicked(Client.Enums.MenuNavTarget.Calendar))>
+                    <span @ref=@_calendarRef  class="material-icons-round nav-item-icon" aria-hidden="true" @onmouseover=@(args => ToolTipService.Open(_calendarRef, @StandardText.Calendar, new ToolTipPosition { Position = 3 }))>calendar_today</span>
+                    <span class="@(Main.ShowMenuSlideOut ? "collapse-nav-text" : "nav-text")"><b>@StandardText.Calendar</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(_target is Enums.MenuNavTarget.Matches ? "active" : "")" href="view/matches" @onmousedown=@(() => OnMainMenuItemClicked(Client.Enums.MenuNavTarget.Matches))>
+                    <span @ref=@_matchesRef  class="material-icons-round nav-item-icon" aria-hidden="true" @onmouseover=@(args => ToolTipService.Open(_matchesRef, @StandardText.Matches, new ToolTipPosition { Position = 3 }))>sports_esports</span>
+                    <span class="@(Main.ShowMenuSlideOut ? "collapse-nav-text" : "nav-text")"><b>@StandardText.Matches</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(_target is Enums.MenuNavTarget.Stats ? "active" : "")" href="view/stats" @onmousedown=@(() => OnMainMenuItemClicked(Client.Enums.MenuNavTarget.Stats))>
+                    <span @ref=@_statisticsRef  class="material-icons-round nav-item-icon" aria-hidden="true" @onmouseover=@(args => ToolTipService.Open(_statisticsRef, @StandardText.Statistics, new ToolTipPosition { Position = 3 }))>pattern</span>
+                    <span class="@(Main.ShowMenuSlideOut ? "collapse-nav-text" : "nav-text")"><b>@StandardText.Statistics</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(_target is Enums.MenuNavTarget.Settings ? "active" : "")" @onmousedown=@(() => OnMainMenuItemClicked(Client.Enums.MenuNavTarget.Settings))>
+                    <span @ref=@_settingsRef class="material-icons-round nav-item-icon" aria-hidden="true" @onmouseover=@(args => ToolTipService.Open(_settingsRef, @StandardText.Settings, new ToolTipPosition { Position = 3 }))>settings</span>
+                    <span class="@(Main.ShowMenuSlideOut ? "collapse-nav-text" : "nav-text")"><b>@StandardText.Settings</b></span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(_target is Enums.MenuNavTarget.Api ? "active" : "")" href="swagger" @onmousedown=@(() => OnMainMenuItemClicked(Client.Enums.MenuNavTarget.Api))>
+                    <span @ref=@_apiRef class="material-icons-round nav-item-icon" aria-hidden="true" @onmouseover=@(args => ToolTipService.Open(_apiRef, @StandardText.Api, new ToolTipPosition { Position = 3 }))>language</span>
+                    <span class="@(Main.ShowMenuSlideOut ? "collapse-nav-text" : "nav-text")"><b>@StandardText.Api</b></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

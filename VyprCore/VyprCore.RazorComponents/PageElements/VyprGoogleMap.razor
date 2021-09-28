@@ -1,0 +1,10 @@
+﻿@inherits VyprCore.RazorComponents.Base.VyprComponentBase
+
+@using Radzen.Blazor
+@using Radzen
+
+<RadzenGoogleMap ApiKey=@ApiKey class=@Class Zoom=@Zoom Center=@(new GoogleMapPosition() { Lat = @Center.Lat, Lng = @Center.Lng }) MapClick=@OnMapClick MarkerClick=@OnMarkerClick>
+    <Markers>
+        @ChildContent
+    </Markers>
+</RadzenGoogleMap>

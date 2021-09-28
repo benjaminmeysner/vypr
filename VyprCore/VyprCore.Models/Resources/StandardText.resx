@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="ConfirmDeleteUserMessage" xml:space="preserve">
+    <value>Are you sure you want to delete user/s?</value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Confirm New Password</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="ConfirmSendUserInvite" xml:space="preserve">
+    <value>Are you sure you want to send user an email invitation? This allows the user to create credentials to gain access to the system.</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateANewUser" xml:space="preserve">
+    <value>Create a New User</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="EditUser" xml:space="preserve">
+    <value>Edit User</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailAlreadyExists" xml:space="preserve">
+    <value>This email already exists against a registered user in the system. Please use a different email.</value>
+  </data>
+  <data name="ExternalId" xml:space="preserve">
+    <value>External Id</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="InvalidLoginAttempt" xml:space="preserve">
+    <value>Unable to login, you may have entered an invalid username or password. If you continue to see this error contact your web administrator for support</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="NoUserEmailExists" xml:space="preserve">
+    <value>User does not have an email registered to their account</value>
+  </data>
+  <data name="OldPassword" xml:space="preserve">
+    <value>Old Password</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role Management</value>
+  </data>
+  <data name="Role_Create" xml:space="preserve">
+    <value>The ability to create roles</value>
+  </data>
+  <data name="Role_Delete" xml:space="preserve">
+    <value>The ability to delete roles</value>
+  </data>
+  <data name="Role_Read" xml:space="preserve">
+    <value>The ability to view roles</value>
+  </data>
+  <data name="Role_Update" xml:space="preserve">
+    <value>The ability to edit roles</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SendUserInvite" xml:space="preserve">
+    <value>Send User Invitation</value>
+  </data>
+  <data name="SomethingWentWrong" xml:space="preserve">
+    <value>Something went wrong</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>User Management</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="UnableToFindUserWithId" xml:space="preserve">
+    <value>Unable to find a user with ID</value>
+  </data>
+  <data name="UserCreated" xml:space="preserve">
+    <value>User has successfully been created</value>
+  </data>
+  <data name="UserDeleted" xml:space="preserve">
+    <value>User has been deleted</value>
+  </data>
+  <data name="UserDetails" xml:space="preserve">
+    <value>User Details</value>
+  </data>
+  <data name="UserInviteSent" xml:space="preserve">
+    <value>Invitation has been sent to the user</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="User_Create" xml:space="preserve">
+    <value>The ability to create users</value>
+  </data>
+  <data name="User_Delete" xml:space="preserve">
+    <value>The ability to delete users</value>
+  </data>
+  <data name="User_Read" xml:space="preserve">
+    <value>The ability to view users</value>
+  </data>
+  <data name="User_Update" xml:space="preserve">
+    <value>The ability to edit users</value>
+  </data>
+  <data name="UserNameAlreadyExsists" xml:space="preserve">
+    <value>This username already exists against a registered user in the system. Please use a different username.</value>
+  </data>
+  <data name="UserRoles" xml:space="preserve">
+    <value>User Roles</value>
+  </data>
+  <data name="UserUpdated" xml:space="preserve">
+    <value>User has successfully been updated in the system</value>
+  </data>
+  <data name="UserDeleteOperationError" xml:space="preserve">
+    <value>The user delete operation encountered an unexpected error</value>
+  </data>
+  <data name="UserInactive" xml:space="preserve">
+    <value>The user is inactive</value>
+  </data>
+  <data name="UpdateDetails" xml:space="preserve">
+    <value>Update Details</value>
+  </data>
+  <data name="BadModelConformity" xml:space="preserve">
+    <value>Unable to update entity as the model does not conform to internal constraints</value>
+  </data>
+  <data name="UserRolesUpdated" xml:space="preserve">
+    <value>User roles have successfully been updated in the system</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="StylingFile" xml:space="preserve">
+    <value>Styling File</value>
+  </data>
+  <data name="RoleDetails" xml:space="preserve">
+    <value>Role Details</value>
+  </data>
+  <data name="CreateANewRole" xml:space="preserve">
+    <value>Create a New Role</value>
+  </data>
+  <data name="RoleAlreadyExists" xml:space="preserve">
+    <value>A Role by that name already exists</value>
+  </data>
+  <data name="RoleClaims" xml:space="preserve">
+    <value>Role Claims</value>
+  </data>
+  <data name="RoleClaimsUpdated" xml:space="preserve">
+    <value>Role claims successfully applied</value>
+  </data>
+  <data name="NameRole" xml:space="preserve">
+    <value>Name the role and choose active status</value>
+  </data>
+  <data name="RoleCreated" xml:space="preserve">
+    <value>Role has been successfully created</value>
+  </data>
+  <data name="CreateRole" xml:space="preserve">
+    <value>Create Role</value>
+  </data>
+  <data name="MissingPermission" xml:space="preserve">
+    <value>You don't currently have permission to perform this action</value>
+  </data>
+  <data name="UnableToProcessRequest" xml:space="preserve">
+    <value>Unable to process your request</value>
+  </data>
+  <data name="ContactEmail" xml:space="preserve">
+    <value>Contact Email</value>
+  </data>
+  <data name="ContactNumber" xml:space="preserve">
+    <value>Contact Phone Number</value>
+  </data>
+  <data name="DefaultDriverRoleChanged" xml:space="preserve">
+    <value>Default role for driver has been changed</value>
+  </data>
+  <data name="User_SendInvitation" xml:space="preserve">
+    <value>Send users invitiation emails from user management screen.</value>
+  </data>
+  <data name="RoleType" xml:space="preserve">
+    <value>Role Type</value>
+  </data>
+  <data name="ConfirmDeleteRoleMessage" xml:space="preserve">
+    <value>Are you sure you want to delete role/s?</value>
+  </data>
+  <data name="RoleDeleted" xml:space="preserve">
+    <value>Role has been deleted</value>
+  </data>
+  <data name="SelectFile" xml:space="preserve">
+    <value>Upload File</value>
+  </data>
+  <data name="FileSelectionCountExceeds" xml:space="preserve">
+    <value>You have selected more files than the maximum allowed. </value>
+  </data>
+  <data name="Upload" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="FileSelectionCountExceeds2" xml:space="preserve">
+    <value>Your selection exceeds the number of maximum number of files allowed. Please remove some file/s before trying again.</value>
+  </data>
+  <data name="FileSelectionSizeExceeds" xml:space="preserve">
+    <value>You have selected a file which exceeds than the maximum allowed size.</value>
+  </data>
+  <data name="Offline" xml:space="preserve">
+    <value>Offline</value>
+  </data>
+  <data name="WarningOfflineRequestQueued" xml:space="preserve">
+    <value>No network connectivity detected, your action has been queued and will be sent when network connectivity is restored.</value>
+  </data>
+  <data name="WebAuthnLoginProblem" xml:space="preserve">
+    <value>The user does not exist or there was a problem logging you in</value>
+  </data>
+  <data name="MissingWebAuthnCredentials" xml:space="preserve">
+    <value>WebAuthn has not been setup for this user or device. Please login first to be prompted.</value>
+  </data>
+  <data name="WebAuthnVerifyProblem" xml:space="preserve">
+    <value>We were unable to verify the ownership of this account. This may be due to an incorrect user/password combination or an internal server-side problem</value>
+  </data>
+  <data name="WebAuthnCreateCredentialProblem" xml:space="preserve">
+    <value>We were unable to link your account to your device due to either a verification problem or an internal server issue</value>
+  </data>
+  <data name="WebAuthnTimeOutOrNotAllowed" xml:space="preserve">
+    <value>Failed to link user with device. This may be caused by user cancellation, the operation timing out or user verification using this device is not allowed</value>
+  </data>
+  <data name="WebAuthnCancelled" xml:space="preserve">
+    <value>Device verification cancelled or there was an error authenticating</value>
+  </data>
+  <data name="WebAuthnProblemAfterVerify" xml:space="preserve">
+    <value>Credentials verified for device, but could not log in due to not finding a tenant for this origin (URL).</value>
+  </data>
+  <data name="WebAuthnNoAuthenticatorAvailable" xml:space="preserve">
+    <value>This device does not have a 'platform' authenticator available and therefore this option cannot be used. Please login with your password instead.</value>
+  </data>
+  <data name="WebAuthnUnableToEstablishVerification" xml:space="preserve">
+    <value>Failed to verify user, it may be because this device is not linked to your account yet. Follow the instructions below to do so.</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="SelectRole" xml:space="preserve">
+    <value>Select Role</value>
+  </data>
+  <data name="NoRecordsToDisplay" xml:space="preserve">
+    <value>No records to display.</value>
+  </data>
+  <data name="LocalisationFailed" xml:space="preserve">
+    <value>Failed to retrieve a value from the resource.</value>
+  </data>
+  <data name="RoleClaims_Administer" xml:space="preserve">
+    <value>The ability to administer role claims for roles</value>
+  </data>
+  <data name="RoleClaims_Read" xml:space="preserve">
+    <value>The ability to view role claims</value>
+  </data>
+  <data name="Swagger_Administer" xml:space="preserve">
+    <value>The ability to access Swagger</value>
+  </data>
+  <data name="DevelopmentBanner" xml:space="preserve">
+    <value>{0} Mode - Data may be periodically reset</value>
+  </data>
+  <data name="UserDeleteOperationErrorUserTenant" xml:space="preserve">
+    <value>Cannot deleted a user which has an association to another tenant.</value>
+  </data>
+  <data name="ApplicationRunningOffline" xml:space="preserve">
+    <value>Application is running offline</value>
+  </data>
+  <data name="UserManagement" xml:space="preserve">
+    <value>User Management</value>
+  </data>
+  <data name="Api" xml:space="preserve">
+    <value>Api</value>
+  </data>
+  <data name="Bulletins" xml:space="preserve">
+    <value>Bulletins</value>
+  </data>
+  <data name="Calendar" xml:space="preserve">
+    <value>Calendar</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Matches" xml:space="preserve">
+    <value>Matches</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Statistics</value>
+  </data>
+  <data name="Teams" xml:space="preserve">
+    <value>Teams</value>
+  </data>
+  <data name="NoUsers" xml:space="preserve">
+    <value>No Users to display</value>
+  </data>
+</root>

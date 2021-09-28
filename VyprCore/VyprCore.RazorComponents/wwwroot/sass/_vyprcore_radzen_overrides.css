@@ -1,0 +1,327 @@
+﻿.rzi {
+  font-size: 1em;
+  vertical-align: middle; }
+
+legend .rzi {
+  margin-right: 10px; }
+
+.vypr-form .rz-popup,
+.vypr-form .rz-spinner,
+.vypr-form .rz-dropdown,
+.vypr-form .rz-dropdown-panel {
+  width: 100%; }
+
+.rz-datatable-thead th,
+.rz-grid-table thead th {
+  background-color: #2873fb; }
+
+.rz-chkbox-box.rz-state-active {
+  background-color: #2873fb; }
+
+.rz-paginator-last,
+.rz-paginator-next {
+  background-color: #2873fb; }
+
+.btn-primary {
+  background-color: #f9777f; }
+
+.btn-secondary,
+.btn-secondary.rz-paginator-element {
+  background-color: #2873fb; }
+
+.rz-paginator-page.rz-state-active {
+  background-color: #2873fb;
+  color: #ffffff; }
+
+.rz-cell-data > i.rzi {
+  font-size: 1.5rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.rz-selectable .rz-datatable-even.rz-state-highlight > td,
+.rz-selectable .rz-datatable-odd.rz-state-highlight > td {
+  cursor: pointer;
+  background-color: #343434;
+  border-right: solid 1px #434343; }
+
+.rz-selectable .rz-datatable-even:hover:not(.rz-state-highlight) > td,
+.rz-selectable .rz-datatable-odd:hover:not(.rz-state-highlight) > td {
+  cursor: pointer;
+  background-color: #f3f5f7; }
+
+.rz-selectable .rz-datatable-even:hover:not(.rz-state-highlight) .rz-cell-data,
+.rz-selectable .rz-datatable-odd:hover:not(.rz-state-highlight) .rz-cell-data {
+  color: inherit; }
+
+.rz-datatable-thead .rzi,
+.rz-datatable-thead .rz-datatable-loading-content .rzi-circle-o-notch,
+.rz-datatable-loading-content .rz-datatable-thead .rzi-circle-o-notch,
+.rz-datatable-thead .rz-datatable-header .rzi-plus,
+.rz-datatable-header .rz-datatable-thead .rzi-plus,
+.rz-datatable-thead .rz-sortable-column .rzi-grid-sort,
+.rz-sortable-column .rz-datatable-thead .rzi-grid-sort,
+.rz-datatable-thead .rz-menuitem .rz-menuitem-icon,
+.rz-menuitem .rz-datatable-thead .rz-menuitem-icon,
+.rz-datatable-thead .rz-fileupload-row .rz-button .rzi-close,
+.rz-datatable-thead .rz-fileupload-row .rz-paginator-element .rzi-close,
+.rz-fileupload-row .rz-button .rz-datatable-thead .rzi-close,
+.rz-fileupload-row .rz-paginator-element .rz-datatable-thead .rzi-close,
+.rz-datatable-thead .rz-fileupload-row .rz-button .rzi-times,
+.rz-datatable-thead .rz-fileupload-row .rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-button .rz-datatable-thead .rzi-times,
+.rz-fileupload-row .rz-paginator-element .rz-datatable-thead .rzi-times,
+.rz-datatable-thead .rz-fileupload-row .rz-button .rz-icon-trash,
+.rz-datatable-thead .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-button .rz-datatable-thead .rz-icon-trash,
+.rz-fileupload-row .rz-paginator-element .rz-datatable-thead .rz-icon-trash,
+.rz-datatable-thead .rz-datatable .rzi-chevron-circle-right,
+.rz-datatable .rz-datatable-thead .rzi-chevron-circle-right,
+.rz-datatable-thead .rz-datatable .rzi-chevron-circle-down,
+.rz-datatable .rz-datatable-thead .rzi-chevron-circle-down,
+.rz-grid-table thead .rzi,
+.rz-grid-table thead .rz-datatable-loading-content .rzi-circle-o-notch,
+.rz-datatable-loading-content .rz-grid-table thead .rzi-circle-o-notch,
+.rz-grid-table thead .rz-datatable-header .rzi-plus,
+.rz-datatable-header .rz-grid-table thead .rzi-plus,
+.rz-grid-table thead .rz-sortable-column .rzi-grid-sort,
+.rz-sortable-column .rz-grid-table thead .rzi-grid-sort,
+.rz-grid-table thead .rz-menuitem .rz-menuitem-icon,
+.rz-menuitem .rz-grid-table thead .rz-menuitem-icon,
+.rz-grid-table thead .rz-fileupload-row .rz-button .rzi-close,
+.rz-grid-table thead .rz-fileupload-row .rz-paginator-element .rzi-close,
+.rz-fileupload-row .rz-button .rz-grid-table thead .rzi-close,
+.rz-fileupload-row .rz-paginator-element .rz-grid-table thead .rzi-close,
+.rz-grid-table thead .rz-fileupload-row .rz-button .rzi-times,
+.rz-grid-table thead .rz-fileupload-row .rz-paginator-element .rzi-times,
+.rz-fileupload-row .rz-button .rz-grid-table thead .rzi-times,
+.rz-fileupload-row .rz-paginator-element .rz-grid-table thead .rzi-times,
+.rz-grid-table thead .rz-fileupload-row .rz-button .rz-icon-trash,
+.rz-grid-table thead .rz-fileupload-row .rz-paginator-element .rz-icon-trash,
+.rz-fileupload-row .rz-button .rz-grid-table thead .rz-icon-trash,
+.rz-fileupload-row .rz-paginator-element .rz-grid-table thead .rz-icon-trash,
+.rz-grid-table thead .rz-datatable .rzi-chevron-circle-right,
+.rz-datatable .rz-grid-table thead .rzi-chevron-circle-right,
+.rz-grid-table thead .rz-datatable .rzi-chevron-circle-down,
+.rz-datatable .rz-grid-table thead .rzi-chevron-circle-down,
+.rz-datatable-thead th .rz-column-title,
+.rz-grid-table thead th .rz-column-title {
+  color: white; }
+
+.rz-datatable-thead th:not(:last-child),
+.rz-grid-table thead th:not(:last-child) {
+  border-right: solid 1px #387fff; }
+
+.rz-tabview-nav li {
+  border-bottom: 0;
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  border-top: solid 1px #ccc; }
+
+.rz-tabview-panels {
+  border: solid 1px #ccc; }
+
+.rz-tabview-nav > * .rzi {
+  margin-right: 6px; }
+
+.rz-tabview-nav .rz-tabview-selected {
+  border-top: 2px solid #2873fb; }
+
+.rz-tabview-nav li {
+  background-color: #eaeaea7a; }
+
+.rz-state-active a[role='tab'] {
+  color: #404040; }
+
+.rz-tabview-nav li:hover:not(.rz-tabview-selected):not(.rz-state-disabled) a {
+  color: #8b94a9; }
+
+.rz-tabview-nav li:hover:not(.rz-tabview-selected):not(.rz-state-disabled) {
+  background-color: #f8f8f8;
+  border-top: solid 1px #ccc; }
+
+.rz-datatable-data .rz-cell-data .rz-button-sm .rz-button-icon-left,
+.rz-datatable-data .rz-cell-data .rz-paginator-element .rz-button-icon-left,
+.rz-datatable-data .rz-cell-data .rz-fileupload .rz-button .rz-button-icon-left,
+.rz-fileupload .rz-datatable-data .rz-cell-data .rz-button .rz-button-icon-left,
+.rz-grid-table .rz-cell-data .rz-button-sm .rz-button-icon-left,
+.rz-grid-table .rz-cell-data .rz-paginator-element .rz-button-icon-left,
+.rz-grid-table .rz-cell-data .rz-fileupload .rz-button .rz-button-icon-left,
+.rz-fileupload .rz-grid-table .rz-cell-data .rz-button .rz-button-icon-left {
+  line-height: 1.25rem;
+  vertical-align: middle;
+  padding-right: 12px;
+  padding-bottom: 3px;
+  width: 0.1rem; }
+
+.rz-chkbox-box.rz-state-active:hover {
+  background-color: #7fadff; }
+
+-webkit-scrollbar-thumb {
+  background: #2873fb !important; }
+
+.rz-dropdown-item.rz-state-highlight,
+.rz-state-highlight.rz-menuitem,
+.rz-state-highlight.rz-autocomplete-list-item,
+.rz-state-highlight.rz-multiselect-item,
+.rz-dropdown-items li.rz-state-highlight,
+.rz-autocomplete-items li.rz-state-highlight,
+.rz-multiselect-items li.rz-state-highlight {
+  background-color: #2873fb; }
+
+.rz-dropdown-item:hover,
+.rz-menuitem:hover,
+.rz-autocomplete-list-item:hover,
+.rz-multiselect-item:hover,
+.rz-dropdown-items li:hover,
+.rz-autocomplete-items li:hover,
+.rz-multiselect-items li:hover {
+  background-color: #73a5ff; }
+
+.vypr-stretchtabs .rz-tabview-nav li {
+  width: 100%;
+  border-radius: 0;
+  height: 3rem;
+  line-height: 2rem; }
+  .vypr-stretchtabs .rz-tabview-nav li a {
+    width: -webkit-fill-available; }
+
+.rz-datatable-loading-content .rzi-circle-o-notch {
+  color: #2873fb; }
+
+.rz-data-grid {
+  margin-bottom: 0.5rem; }
+
+.rz-data-grid-col-monospaced {
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace; }
+
+rz-navigation-menu,
+ul.rz-profile-menu .rz-navigation-item-icon-children,
+ul.rz-profile-menu .rz-navigation-menu .rz-navigation-item-wrapper,
+.item-text,
+.rz-menu,
+.rz-profile-menu,
+.rz-navigation-item,
+.rz-navigation-item-wrapper {
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  user-drag: none; }
+
+.rz-navigation-item-link {
+  background: inherit;
+  color: #535353 !important; }
+
+ul.rz-profile-menu .rz-navigation-menu .rz-navigation-item-wrapper:hover {
+  background-color: #2873fb;
+  color: #ffffff; }
+
+ul.rz-profile-menu .rz-navigation-menu .rz-navigation-item-link, ul.rz-profile-menu .rz-navigation-menu .rz-navigation-item-text {
+  color: inherit !important;
+  background: inherit;
+  cursor: pointer; }
+
+.vypr-profiledisplay .rz-navigation-menu {
+  margin-top: 3px; }
+
+.rz-navigation-item-wrapper {
+  height: 50px;
+  display: flex;
+  align-items: center; }
+
+.rz-card {
+  border: 1px solid #e4e4e4;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.rz-progressbar-label {
+  color: white;
+  font-weight: bold; }
+
+.rz-progressbar-value {
+  background: #3a4468; }
+
+.rz-datalist-data {
+  padding: 0;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 10px 0 #dbdbdb;
+  -webkit-box-shadow: 0 8px 10px 0 #dbdbdb; }
+
+.vypr-stretch-selectbar {
+  width: 100%;
+  display: flex; }
+  .vypr-stretch-selectbar .rz-button {
+    width: 100%; }
+
+.footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+.rz-colorpicker,
+.rz-lookup-search input,
+.rz-spinner,
+.rz-calendar .rz-inputtext,
+.rz-multiselect,
+.rz-dropdown,
+.mask,
+.rz-textarea,
+.rz-textbox {
+  height: 3rem;
+  line-height: 2.5rem;
+  font-size: 1rem; }
+
+.rz-chkbox {
+  width: 1.45rem;
+  height: 1.45rem; }
+
+.rz-chkbox-box .rzi, .rz-chkbox-box .rz-datatable-loading-content .rzi-circle-o-notch, .rz-datatable-loading-content .rz-chkbox-box .rzi-circle-o-notch, .rz-chkbox-box .rz-datatable-header .rzi-plus, .rz-datatable-header .rz-chkbox-box .rzi-plus, .rz-chkbox-box .rz-sortable-column .rzi-grid-sort, .rz-sortable-column .rz-chkbox-box .rzi-grid-sort, .rz-chkbox-box .rz-datatable .rzi-chevron-circle-down, .rz-datatable .rz-chkbox-box .rzi-chevron-circle-down, .rz-chkbox-box .rz-datatable .rzi-chevron-circle-right, .rz-datatable .rz-chkbox-box .rzi-chevron-circle-right, .rz-chkbox-box .rz-fileupload-row .rz-button .rzi-close, .rz-chkbox-box .rz-fileupload-row .rz-paginator-element .rzi-close, .rz-fileupload-row .rz-button .rz-chkbox-box .rzi-close, .rz-fileupload-row .rz-paginator-element .rz-chkbox-box .rzi-close, .rz-chkbox-box .rz-fileupload-row .rz-button .rzi-times, .rz-chkbox-box .rz-fileupload-row .rz-paginator-element .rzi-times, .rz-fileupload-row .rz-button .rz-chkbox-box .rzi-times, .rz-fileupload-row .rz-paginator-element .rz-chkbox-box .rzi-times, .rz-chkbox-box .rz-fileupload-row .rz-button .rz-icon-trash, .rz-chkbox-box .rz-fileupload-row .rz-paginator-element .rz-icon-trash, .rz-fileupload-row .rz-button .rz-chkbox-box .rz-icon-trash, .rz-fileupload-row .rz-paginator-element .rz-chkbox-box .rz-icon-trash, .rz-chkbox-box .rz-menuitem .rz-menuitem-icon, .rz-menuitem .rz-chkbox-box .rz-menuitem-icon {
+  width: inherit;
+  height: inherit; }
+
+.rz-dropdown-item,
+.rz-menuitem,
+.rz-autocomplete-list-item,
+.rz-multiselect-item,
+.rz-dropdown-items li,
+.rz-autocomplete-items li,
+.rz-multiselect-items li {
+  padding: 0.6rem 0.625rem; }
+
+.rz-listbox-filter-container,
+.rz-dropdown-filter-container,
+.rz-multiselect-filter-container {
+  height: 3rem; }
+
+.rz-tabview-panels {
+  border-top: 0;
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  border-bottom: solid 1px #ccc; }
+
+.rz-tabview-nav .rz-tabview-selected {
+  border-bottom: 0 !important; }
+
+.vypr-stretchtabs .rz-tabview-nav li {
+  border-bottom: 1px solid silver; }
+
+.rz-cell-data .vypr-rz-componentwrapper {
+  margin-bottom: 0 !important; }
+
+.rz-progressbar {
+  background-color: #b4b4b4; }
+
+.rz-colorpicker,
+.rz-lookup-search input,
+.rz-spinner,
+.rz-calendar .rz-inputtext,
+.rz-multiselect,
+.rz-dropdown,
+.mask,
+.rz-textarea,
+.rz-textbox {
+  background: white; }
+
+.rz-chkbox-box.rz-state-active.rz-state-disabled {
+  background-color: #2873fb; }

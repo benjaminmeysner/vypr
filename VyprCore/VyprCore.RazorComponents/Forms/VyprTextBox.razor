@@ -1,0 +1,25 @@
+﻿@inherits VyprCore.RazorComponents.Base.VyprFormComponentBase<string>
+
+@using Radzen.Blazor
+
+<div class="vypr-rz-componentwrapper">
+    <div class="vypr-rz-componentcol-lg">
+        @if (ShowLabel)
+        {
+            @LabelRenderTree
+        }
+
+        @if (UsePasswordMask)
+        {
+            <RadzenPassword @bind-Value=@Value Change=@OnTextBoxChanged id=@ComponentId Name=@ComponentId Placeholder=@Placeholder Visible=@IsVisible Disabled=@IsReadOnly class=@($"vypr-rcomp-textbox {@Class}") />
+        }
+        else if (IsTextArea)
+        {
+            <RadzenTextArea @bind-Value=@Value Change=@OnTextBoxChanged id=@ComponentId Name=@ComponentId Placeholder=@Placeholder Visible=@IsVisible Disabled=@IsReadOnly class=@($"vypr-rcomp-textbox {@Class}") />
+        }
+        else
+        {
+            <RadzenTextBox @bind-Value="Value" Change=@OnTextBoxChanged id=@ComponentId Name=@ComponentId Placeholder=@Placeholder Visible=@IsVisible Disabled=@IsReadOnly class=@($"vypr-rcomp-textbox {@Class}") />
+        }
+    </div>
+</div>

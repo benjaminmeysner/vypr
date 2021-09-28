@@ -1,0 +1,22 @@
+﻿@inherits VyprCore.RazorComponents.Base.VyprFormComponentBase<DateTime?>
+
+@using Radzen.Blazor
+
+<div class="vypr-rz-componentwrapper">
+    <div class="vypr-rz-componentcol-lg">
+        @LabelRenderTree
+        @if (Format == VyprDatePickerFormat.TimeOnly12H
+        || Format == VyprDatePickerFormat.TimeOnly24H)
+        {
+            <RadzenDatePicker id=@ComponentId Name=@ComponentId @bind-Value=@Value ShowTime="true" TimeOnly="true" DateFormat="HH:mm" HourFormat=@(Format == VyprDatePickerFormat.TimeOnly12H?"12":"24") Visible=@IsVisible Disabled=@IsReadOnly class="vypr-rcomp-datepicker" />
+        }
+        else if (Format == VyprDatePickerFormat.DateOnly)
+        {
+            <RadzenDatePicker id=@ComponentId Name=@ComponentId @bind-Value=@Value DateFormat="d" Disabled=@IsReadOnly class="vypr-rcomp-datepicker" Visible=@IsVisible />
+        }
+        else // 12H/24H
+        {
+            <RadzenDatePicker id=@ComponentId Name=@ComponentId @bind-Value=@Value ShowTime="true" HourFormat=@(Format == VyprDatePickerFormat.DateAndTime12H?"12":"24") Visible=@IsVisible Disabled=@IsReadOnly class="vypr-rcomp-datepicker" DateFormat="MM/dd/yyyy h:mm tt" />
+        }
+    </div>
+</div>

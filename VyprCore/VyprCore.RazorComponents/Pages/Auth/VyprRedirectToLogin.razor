@@ -1,0 +1,28 @@
+﻿@inject NavigationManager Navigation
+
+@code {
+    /// <summary>
+    /// Forces the app to redirect to the MFA login page rather than the
+    /// password login page.
+    /// </summary>
+    [Parameter]
+    public bool UseWebAuthn { get; set; } = false;
+
+    /// <summary>
+    /// Method invoked when the component is ready to start, having received its
+    /// initial parameters from its parent in the render tree. If you do not wish to
+    /// include MFA login for your app, you can set the MFA parameter to false, this
+    /// by default will use password login only.
+    /// </summary>
+    protected override void OnInitialized()
+    {
+        if (UseWebAuthn)
+        {
+            Navigation.NavigateTo($"/login?ReturnUrl={Uri.EscapeDataString(new Uri(Navigation.Uri).PathAndQuery)}&U_WebAuthn=true");
+        }
+        else
+        {
+            Navigation.NavigateTo($"/login?ReturnUrl={Uri.EscapeDataString(new Uri(Navigation.Uri).PathAndQuery)}");
+        }
+    }
+}

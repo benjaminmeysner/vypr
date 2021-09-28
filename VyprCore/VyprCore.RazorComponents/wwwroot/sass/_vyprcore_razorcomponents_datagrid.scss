@@ -1,0 +1,74 @@
+// <copyright file="_razorcomponents_containers.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+@import "_vyprcore_razorcomponents_vars.scss";
+
+.vypr-datagrid-exportoptions,
+.vypr-datagrid-crudoptions {
+    border-top-left-radius: $RadzenDefaultBorderRadius;
+    border-top-right-radius: $RadzenDefaultBorderRadius;
+    border-left: 1px solid #dadfe2;
+    border-right: 2px solid #ededed;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    background: #e6eeef;
+
+    // Give all buttons a margin top so they space nicely when 
+    // stacked.
+    button {
+        margin-top: 1.5rem;
+    }
+}
+
+.vypr-datagrid-crudoptions {
+}
+
+.vypr-datagrid-checkbox,
+.vypr-datagrid-identityvalue {
+    display: flex;
+    justify-content: center;
+}
+
+.vypr-datagrid-identityvalue {
+    border: 1px dotted silver;
+    border-radius: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.vypr-datagrid-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: $ComponentSpacing;
+}
+
+.vypr-edit-col,
+.vypr-delete-col,
+.vypr-edit-inprogress-col {
+    i {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .rzi {
+        font-size: 1.65rem;
+    }
+}
+
+.vypr-datagrid-pagerfooter {
+    display: flex;
+    flex: 0 1 auto;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    justify-content: flex-end;
+    font-size: 10pt;
+}
+
+.vypr-datagrid-pagerfootersection {
+    margin-right: 5px;
+}

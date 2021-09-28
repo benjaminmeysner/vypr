@@ -1,0 +1,15 @@
+﻿// <copyright file="_razorcomponents_fieldset.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+@import "_vyprcore_razorcomponents_vars.scss";
+
+.vypr-rcomp-fieldset {
+    border-radius: $RadzenDefaultBorderRadius;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem; // Radzen margins
+
+    legend > span {
+        font-size: 0.75rem;
+    }
+}

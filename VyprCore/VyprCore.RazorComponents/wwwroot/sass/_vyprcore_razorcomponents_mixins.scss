@@ -1,0 +1,19 @@
+﻿// <copyright file="_razorcomponents_mixins.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+@import "_vyprcore_razorcomponents_vars.scss";
+
+@mixin InvalidInputOutline {
+    border-radius: 4px; // This matches the radzen default radius.
+    border: 1px solid $InputInvalidColour !important // Import to override the Radzen default;
+}
+
+@mixin CenterVertAndHor {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

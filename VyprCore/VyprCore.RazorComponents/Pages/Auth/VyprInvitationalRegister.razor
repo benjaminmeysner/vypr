@@ -1,0 +1,23 @@
+﻿@attribute [Route(RelativePath)]
+
+@layout VyprLoginLandingLayout
+
+@inherits RazorComponents.Base.VyprPageBase
+
+@using VyprCore.RazorComponents.Buttons
+@using VyprCore.RazorComponents.Layouts
+@using VyprCore.RazorComponents.Pages.Error
+
+<div class="vypr-app-ir">
+    <h2>Welcome to <span class="application-name" /></h2>
+
+    <p>
+        Thank you <b>@_userName</b> for following the invitation we sent. To get you up and running,
+        we require you to create a login for your account by selecting one of below options. You may change
+        these from your account settings once you're set.
+    </p>
+
+    <div class="vypr-app-btnset" style="margin-top:2rem;">
+        <VyprButtonPrimary Icon="lock" Text="Create Password" OnClick=@(() => NavigationManager.NavigateTo($"/invite/create?inv_token={_inviteToken}&user_id={_userName}")) />
+    </div>
+</div>

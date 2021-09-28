@@ -1,0 +1,11 @@
+﻿.company-fullname:before {
+    content: "Border Merchant Systems";
+}
+
+.application-name:before {
+    content: "epod";
+}
+
+.company-landing-logo {
+    background-image: url("/images/bms/bms_company-logo.png");
+}

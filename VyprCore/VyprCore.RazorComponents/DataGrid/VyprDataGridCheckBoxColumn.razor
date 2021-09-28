@@ -1,0 +1,13 @@
+﻿@typeparam TModel
+
+@using Radzen
+@using Radzen.Blazor
+@using VyprCore.RazorComponents.Forms
+
+@inherits VyprCore.RazorComponents.Base.VyprDataGridColumnBase<TModel>
+
+<RadzenDataGridColumn TItem="TModel" Property="@Property" Title="@Title" Width=@Width Sortable="@Sortable" Filterable="@Filterable" SortProperty="@SortProperty" FilterProperty="@FilterProperty">
+    <Template Context="data">
+        <span class="vypr-datagrid-checkbox"><VyprCheckBox Value=@((GetBoolValueOfProperty(data) ? true : false)) Change=@(x => OnValueChangedAsync((x, data))) InGrid=@true IsReadOnly=@(IsReadOnly(data)) /></span>
+    </Template>
+</RadzenDataGridColumn>

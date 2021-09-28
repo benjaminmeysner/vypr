@@ -1,0 +1,15 @@
+﻿@typeparam TModel
+
+@using Radzen
+@using Radzen.Blazor
+
+@inherits VyprCore.RazorComponents.Base.VyprDataGridColumnBase<TModel>
+
+<RadzenDataGridColumn TItem="TModel" Property="@Property" Title="@Title" Width=@Width Sortable=@false Filterable=@false CssClass=@(Monospaced ? "rz-data-grid-col-monospaced" : "")>
+    <Template Context="data">
+        <span class="vypr-datagrid-identityvalue">@typeof(TModel).GetProperty(Property).GetValue(data)</span>
+    </Template>
+    <FooterTemplate>
+        @FooterTemplate
+    </FooterTemplate>
+</RadzenDataGridColumn>

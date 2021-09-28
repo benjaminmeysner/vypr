@@ -1,0 +1,12 @@
+﻿@using Radzen.Blazor
+
+@typeparam TValue
+
+@inherits VyprCore.RazorComponents.Base.VyprFormComponentBase<TValue>
+
+<div class="vypr-rz-componentwrapper">
+    <div class="vypr-rz-componentcol-lg">
+        @LabelRenderTree
+        <RadzenNumeric id=@ComponentId Name=@ComponentId TValue=@TValue @bind-Value=@Value ShowUpDown=@ShowUpDown Disabled=@IsReadOnly Visible=@IsVisible />
+    </div>
+</div>

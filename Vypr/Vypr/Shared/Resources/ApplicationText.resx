@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Comments" xml:space="preserve">
+    <value>Comments</value>
+  </data>
+  <data name="CompleteDelivery" xml:space="preserve">
+    <value>Complete Delivery</value>
+  </data>
+  <data name="CompletedTrips" xml:space="preserve">
+    <value>Completed Trips</value>
+  </data>
+  <data name="ConfirmDeliveryDetails" xml:space="preserve">
+    <value>Confirm delivery details</value>
+  </data>
+  <data name="CounterActKey" xml:space="preserve">
+    <value>CounterAct Key</value>
+  </data>
+  <data name="CounterActUrl" xml:space="preserve">
+    <value>CounterAct API Url</value>
+  </data>
+  <data name="DefaultDriverRole" xml:space="preserve">
+    <value>Default Driver Role</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="DropCommentPlaceholder" xml:space="preserve">
+    <value>Leave any comments here...</value>
+  </data>
+  <data name="Drops" xml:space="preserve">
+    <value>Drops</value>
+  </data>
+  <data name="DropStatusCompleted" xml:space="preserve">
+    <value>This drop has been done and marked as &lt;b&gt;completed.&lt;/b&gt;</value>
+  </data>
+  <data name="DropStatusRejected" xml:space="preserve">
+    <value>This drop has been done and marked as &lt;b&gt;rejected.&lt;/b&gt;</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>Items</value>
+  </data>
+  <data name="GoogleMapApiKey" xml:space="preserve">
+    <value>Google Maps API Key</value>
+  </data>
+  <data name="GoogleMapApiKeyDescription" xml:space="preserve">
+    <value>Configures the Google Maps API key for the tenant. This will enable Google maps
+                        to be embedded in the Driver user interface when carrying out deliveries.</value>
+  </data>
+  <data name="NoDefaultDriverRole" xml:space="preserve">
+    <value>No default driver role set up for tenant</value>
+  </data>
+  <data name="NoDropsToShow" xml:space="preserve">
+    <value>No available drops to show</value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="NoTripsToShow" xml:space="preserve">
+    <value>No available trips to show</value>
+  </data>
+  <data name="NoUserFound" xml:space="preserve">
+    <value>User not found</value>
+  </data>
+  <data name="OptionOfPhoto" xml:space="preserve">
+    <value>Use photo</value>
+  </data>
+  <data name="OptionOfSignature" xml:space="preserve">
+    <value>Use signature</value>
+  </data>
+  <data name="Progress" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="RejectDelivery" xml:space="preserve">
+    <value>Reject Delivery</value>
+  </data>
+  <data name="RejectedDrops" xml:space="preserve">
+    <value>Rejected Drops</value>
+  </data>
+  <data name="RequirePhoto" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="RequireSignature" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="Today" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Todo" xml:space="preserve">
+    <value>Todo</value>
+  </data>
+  <data name="Tomorrrow" xml:space="preserve">
+    <value>Tomorrow</value>
+  </data>
+  <data name="Trips" xml:space="preserve">
+    <value>Trips</value>
+  </data>
+  <data name="TripsDashboard" xml:space="preserve">
+    <value>Trips Dashboard</value>
+  </data>
+  <data name="TripsRemoteApiError" xml:space="preserve">
+    <value>Critical error obtaining trip information from the server</value>
+  </data>
+  <data name="TripsTomorrow" xml:space="preserve">
+    <value>Tomorrow's Trips</value>
+  </data>
+  <data name="UserIsDataFed" xml:space="preserve">
+    <value>User created by API feed, therefore some properties may be unavailable for modification.</value>
+  </data>
+  <data name="ViewDrop" xml:space="preserve">
+    <value>View drop</value>
+  </data>
+  <data name="ViewTrip" xml:space="preserve">
+    <value>View trip</value>
+  </data>
+  <data name="WhatThreeWordsApiKey" xml:space="preserve">
+    <value>What3Words API Key</value>
+  </data>
+  <data name="ConfirmRejectionDetails" xml:space="preserve">
+    <value>Confirm rejection details</value>
+  </data>
+  <data name="DropRejectionCommentPlaceholder" xml:space="preserve">
+    <value>Leave any rejection comments here...</value>
+  </data>
+  <data name="DeliverVia" xml:space="preserve">
+    <value>Deliver via</value>
+  </data>
+  <data name="ReasonForRejection" xml:space="preserve">
+    <value>Reason for rejection:</value>
+  </data>
+  <data name="TripProgress" xml:space="preserve">
+    <value>Trip Progress</value>
+  </data>
+  <data name="AdditionalPhotos" xml:space="preserve">
+    <value>Additional Photos</value>
+  </data>
+  <data name="PhotoEvidence" xml:space="preserve">
+    <value>To complete the delivery please upload photographic evidence or request a signature.</value>
+  </data>
+  <data name="RecipientName" xml:space="preserve">
+    <value>Recipient name: </value>
+  </data>
+  <data name="RecipientSignature" xml:space="preserve">
+    <value>Recipient signature</value>
+  </data>
+  <data name="RejectPhotoEvidence" xml:space="preserve">
+    <value>To reject the delivery please upload photographic evidence or request a signature.</value>
+  </data>
+  <data name="SelectPhotos" xml:space="preserve">
+    <value>Select Photos</value>
+  </data>
+  <data name="SignaturePlaceholder" xml:space="preserve">
+    <value>Please sign here</value>
+  </data>
+  <data name="UploadPhoto" xml:space="preserve">
+    <value>Upload Photo</value>
+  </data>
+  <data name="NoCommentEntered" xml:space="preserve">
+    <value>No Comment Entered</value>
+  </data>
+  <data name="PhotoEvidenceRequired" xml:space="preserve">
+    <value>Photographic evidence is required before completing this delivery</value>
+  </data>
+  <data name="SignatureRequired" xml:space="preserve">
+    <value>Customer signature is required before completing this delivery</value>
+  </data>
+  <data name="ApiKey" xml:space="preserve">
+    <value>API Key</value>
+  </data>
+  <data name="ApiKeyGenerate" xml:space="preserve">
+    <value>Generate</value>
+  </data>
+  <data name="ApiKeyGenerateDescription" xml:space="preserve">
+    <value>Generates the API key for tenant. This will allow users with the appropriate role to make API calls. For security purposes, this API Key will only be visible on generation and will not be accessible again.</value>
+  </data>
+  <data name="ApiUser" xml:space="preserve">
+    <value>API User</value>
+  </data>
+  <data name="Drops_Administer" xml:space="preserve">
+    <value>The ability to administer Drops</value>
+  </data>
+  <data name="Drops_Read" xml:space="preserve">
+    <value>The ability to read Drops</value>
+  </data>
+  <data name="Tenant_ConnectionDetails_Administer" xml:space="preserve">
+    <value>The ability to administer Tenant Connection Details</value>
+  </data>
+  <data name="Trips_Administer" xml:space="preserve">
+    <value>The ability to administer Trips</value>
+  </data>
+  <data name="Trips_Read" xml:space="preserve">
+    <value>The ability to read Trips</value>
+  </data>
+  <data name="WhatThreeWordsApiKeyDescription" xml:space="preserve">
+    <value>Configures the What3Words API key for the tenant. This will enable What3Words to be used instead of GPS coordinates with maps in the Driver user interface when carrying out deliveries.</value>
+  </data>
+  <data name="ApiKeyExistsDescription" xml:space="preserve">
+    <value>The API key has already been generated, and for security purposes is no longer visible. If required, a new API key can be generated. The former API key will no longer work.</value>
+  </data>
+  <data name="ApiKeyInvalid" xml:space="preserve">
+    <value>API key is invalid or is not correctly configured in the system</value>
+  </data>
+  <data name="ApiKeyIsGeneratedDescription" xml:space="preserve">
+    <value>For security purposes, this API Key will only be visible on generation and will not be accessible again. If this key is forgotten or lost, a new API Key can be generated, and the former key will no longer function.</value>
+  </data>
+  <data name="ApiKeyRequired" xml:space="preserve">
+    <value>API key is required</value>
+  </data>
+  <data name="UpdateKey" xml:space="preserve">
+    <value>Update key</value>
+  </data>
+  <data name="DropRejectionCommentRequired" xml:space="preserve">
+    <value>Rejection comment required in order to complete this delivery</value>
+  </data>
+  <data name="SkipImageAttachments" xml:space="preserve">
+    <value>Skip Image Upload</value>
+  </data>
+  <data name="ImageUploadWait" xml:space="preserve">
+    <value>Do you wish to continue without waiting? If you choose to complete the delivery now, any images which have not finished uploading will be lost.</value>
+  </data>
+  <data name="ApiKeyHidden" xml:space="preserve">
+    <value>API key is hidden</value>
+  </data>
+  <data name="ConnectionDetails" xml:space="preserve">
+    <value>Connection Details</value>
+  </data>
+  <data name="CounterActKeyDescription" xml:space="preserve">
+    <value>The Counteract API Key for the tenant. This is the security key used in conjuction with the CountAct API Url to gain access to the resource.</value>
+  </data>
+  <data name="CounterActUrlDescription" xml:space="preserve">
+    <value>The CounterAct API Url for the tenant. This is the origin used to build the endpoints when retrieving and updating delivery data. </value>
+  </data>
+  <data name="AppSettings" xml:space="preserve">
+    <value>App Settings</value>
+  </data>
+  <data name="CounterActSettings" xml:space="preserve">
+    <value>CounterAct Settings</value>
+  </data>
+  <data name="UpdateConnectionDetails" xml:space="preserve">
+    <value>Update Connections</value>
+  </data>
+  <data name="TenantBadConfiguration" xml:space="preserve">
+    <value>Organisational tenant is not properly configured to establish a connection to a resource.</value>
+  </data>
+  <data name="CounterActUnknownVersion" xml:space="preserve">
+    <value>Unable to determine CounterAct version from the configured API URL. There was no endpoint listening at this address that could accept the versioning request. This is often caused by an incorrect address or SOAP action.</value>
+  </data>
+  <data name="CounterActVersionAt" xml:space="preserve">
+    <value>CounterAct version</value>
+  </data>
+  <data name="TenantApiIpAddressEmpty" xml:space="preserve">
+    <value>No IP Address constraint</value>
+  </data>
+  <data name="ApiIpWhitelist" xml:space="preserve">
+    <value>API IP whitelist</value>
+  </data>
+  <data name="TenantApiIpAddressNoConstraints" xml:space="preserve">
+    <value>There is currently no IP address constraint configured for this tenants access to the API - this means any IP addresses are granted access providing they present the correct API key. It is recommended for security purposes you add the IP addresses that will be exclusively accessing this resource. </value>
+  </data>
+  <data name="NoApiKeyConfigured" xml:space="preserve">
+    <value>There is currently no API key configured for this tenant. Any requests to the API resource will therefore be blocked. You must configure an API key here and add it to your HTTP requests header section to authenticate with the API.</value>
+  </data>
+  <data name="TenantApiIpCouldNotDelete" xml:space="preserve">
+    <value>Unable to remove IP address due to an internal server error.</value>
+  </data>
+  <data name="TenantApiIpCouldNotAdd" xml:space="preserve">
+    <value>Unable to add IP address due to an internal server error.</value>
+  </data>
+  <data name="IpAddressCannotBeEmpty" xml:space="preserve">
+    <value>An IP address cannot be empty.</value>
+  </data>
+  <data name="IpAddressBadFormat" xml:space="preserve">
+    <value>Not a valid IPv4 format.</value>
+  </data>
+  <data name="CouldNotEstablishRemoteIp" xml:space="preserve">
+    <value>Could not establish remote IP address</value>
+  </data>
+  <data name="IpAddressUnauthorized" xml:space="preserve">
+    <value>You are not authorised to complete this request</value>
+  </data>
+  <data name="ViewDirectDrop" xml:space="preserve">
+    <value>View direct drop</value>
+  </data>
+  <data name="DropOff" xml:space="preserve">
+    <value>Drop Off</value>
+  </data>
+  <data name="DropPickup" xml:space="preserve">
+    <value>Pickup</value>
+  </data>
+  <data name="DropOffLocation" xml:space="preserve">
+    <value>Drop Off Location</value>
+  </data>
+  <data name="DropPickupLocation" xml:space="preserve">
+    <value>Pickup Location</value>
+  </data>
+  <data name="ProofOfDeliveryOptions" xml:space="preserve">
+    <value>Proof of delivery options</value>
+  </data>
+</root>

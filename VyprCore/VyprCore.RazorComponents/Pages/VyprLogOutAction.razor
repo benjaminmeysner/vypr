@@ -1,0 +1,36 @@
+﻿@page "/logout"
+
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using VyprCore.Client.Api
+
+@code {
+
+    [Inject]
+    SignOutSessionStateManager SignOutManager { get; set; }
+
+    [Inject]
+    NavigationManager NavigationManager { get; set; }
+
+    [Inject]
+    public AccountManageApi AccountApi { get; set; }
+
+    protected async Task BeginSignOut()
+    {
+        await SignOutManager.SetSignOutState();
+        await AccountApi.LogOut(new HttpCodeResponseIntercept());
+
+        NavigationManager.NavigateTo($"{NavigationManager.ToAbsoluteUri($"/login?U_WebAuthn=true")}", true);
+    }
+
+    /// <summary>
+    /// Method invoked when the component is ready to start, having received its
+    /// initial parameters from its parent in the render tree.
+    /// Override this method if you will perform an asynchronous operation and
+    /// want the component to refresh when that operation is completed.
+    /// </summary>
+    protected override async Task OnInitializedAsync()
+    {
+        await BeginSignOut();
+    }
+}

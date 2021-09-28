@@ -1,0 +1,25 @@
+﻿// <copyright file="_razorcomponents_buttons.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+@import "_vyprcore_razorcomponents_vars.scss";
+
+.vypr-btn {
+    width: auto;
+    height: 2.3875rem;
+    font-weight: 600;
+    text-transform: capitalize;
+
+    &.btn-processing {
+    }
+}
+
+.vypr-btnset {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: $ComponentSpacing;
+
+    > .vypr-btn {
+        margin-left: $ButtonSpacing;
+    }
+}

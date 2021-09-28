@@ -1,0 +1,14 @@
+﻿@using Radzen.Blazor
+
+@inherits VyprCore.RazorComponents.Base.VyprContainerBase
+
+<RadzenFieldset id=@ComponentId name=@ComponentId AllowCollapse=@AllowCollapse Collapsed=@(!OpenDefault) class="vypr-rcomp-fieldset">
+	<HeaderTemplate>
+		<span>
+			<RadzenIcon Icon=@Icon />@Heading
+		</span>
+	</HeaderTemplate>
+	<ChildContent>
+		@ChildContent
+	</ChildContent>
+</RadzenFieldset>

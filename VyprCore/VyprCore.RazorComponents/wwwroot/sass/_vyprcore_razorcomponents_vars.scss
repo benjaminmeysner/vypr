@@ -1,0 +1,78 @@
+﻿// <copyright file="_razorcomponents_vars.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+$DefaultCompanyName: "No Company Specified";
+$DefaultApplicationName: "No Application Specified";
+
+$ComponentSpacing: 20px;
+$ButtonSpacing: 10px;
+$InputRequiredSpacing: 2px;
+$InputWidth: 100%;
+$InputHeight: 3rem;
+
+$InputRequiredColour: #ff477b;
+
+$InputValidColour: #69c45e;
+$InputInvalidColour: #ffacc3;
+
+$SpinnerWidthHeight: 1.5rem;
+$SpinnerThickness: 1.1em;
+$SpinnerColour: #479cc8;
+$Circle: 50%;
+
+$PrimaryBlue: #2873fb;
+$RadzenDefaultBorderRadius: 4px;
+
+$IconSize: 1.2rem;
+$IconPadding: 3px;
+
+// App style 1
+$AvatarSize: 2rem;
+$AvatarBackground: #2873fb;
+$AvatarColour: white;
+$CloudOnline: #77b7f9;
+$CloudOffline: #f9777f;
+
+// Fonts
+@font-face {
+    font-family: 'Manrope Regular';
+    src: url('../fonts/manrope/Manrope-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope Thin';
+    src: url('../fonts/manrope/Manrope-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope Bold';
+    src: url('../fonts/manrope/Manrope-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope Semi-Bold';
+    src: url('../fonts/manrope/Manrope-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/MaterialIcons-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/MaterialIcons-Round.woff) format('woff');
+}

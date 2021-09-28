@@ -1,0 +1,8 @@
+﻿@typeparam TModel
+
+@using Radzen.Blazor
+
+@inherits VyprCore.RazorComponents.Base.VyprDataListBase<TModel>
+
+<RadzenDataList @ref=@ListInternal Template=@Template Data=@DataSource TItem=@TModel class=@Class>
+</RadzenDataList>

@@ -1,0 +1,28 @@
+﻿<div class="nav-menu-extended">
+    <div class="top-row-extended">
+        <!-- Secondary logo or slogan -->
+    </div>
+    <div class="nav-menu-extended-content">
+        @if (NavTarget == Enums.MenuNavTarget.Settings)
+        {
+            <h4>Settings & Management</h4>
+            <ul>
+                <li>Applications Settings</li>
+                <li>Company Management</li>
+            </ul>
+            <ul>
+                <li><a href="/view/settings/user">@VyprCore.Models.Resources.StandardText.UserManagement</a></li>
+                <li>Team Management</li>
+            </ul>
+            <ul>
+                <li>Schedule Management</li>
+                <li>Event Management</li>
+            </ul>
+            <ul>
+                <li>Game Management</li>
+                <li>Platform Management</li>
+                <li>Metric Group Management</li>
+            </ul>
+        }
+    </div>
+</div>

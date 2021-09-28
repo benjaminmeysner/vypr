@@ -1,0 +1,11 @@
+﻿@page "/error/{StatusCode:int}"
+
+<div class="vypr-errorcontainer">
+    <span>
+        <b>@_statusCode</b>
+    </span>
+    <hr />
+    <span>
+        @_statusDescription
+    </span>
+</div>

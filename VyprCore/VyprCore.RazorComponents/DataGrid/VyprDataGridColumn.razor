@@ -1,0 +1,32 @@
+﻿@typeparam TModel
+
+@using Radzen
+@using Radzen.Blazor
+
+@inherits VyprCore.RazorComponents.Base.VyprDataGridColumnBase<TModel>
+
+@if (Template != null)
+{
+    <RadzenDataGridColumn TItem="TModel" Property="@Property" Title="@Title" Width=@Width Sortable="@Sortable" Filterable="@Filterable" SortProperty="@SortProperty" FilterProperty="@FilterProperty" CssClass=@(Monospaced ? $"rz-data-grid-col-monospaced {Class}" : $"{Class}")>
+        <Template Context="data">
+            @Template(data)
+        </Template>
+        <FooterTemplate>
+            @FooterTemplate
+        </FooterTemplate>
+        <EditTemplate Context="data">
+            @EditTemplate(data)
+        </EditTemplate>
+    </RadzenDataGridColumn>
+}
+else
+{
+    <RadzenDataGridColumn TItem="TModel" Property="@Property" Title="@Title" Width=@Width Sortable="@Sortable" Filterable="@Filterable" SortProperty="@SortProperty" FilterProperty="@FilterProperty" CssClass=@(Monospaced ? $"rz-data-grid-col-monospaced {Class}" : $"{Class}")>
+        <FooterTemplate>
+            @FooterTemplate
+        </FooterTemplate>
+        <EditTemplate Context="data">
+            @EditTemplate(data)
+        </EditTemplate>
+    </RadzenDataGridColumn>
+}

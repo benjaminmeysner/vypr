@@ -1,0 +1,28 @@
+﻿@typeparam TModel
+
+@inherits VyprCore.RazorComponents.Base.VyprFormBase
+
+@using Blazored.FluentValidation
+@using Microsoft.AspNetCore.Components.Forms
+@using Radzen.Blazor
+
+<EditForm id=@ComponentId Name=@ComponentId class=@($"vypr-form {Class}") EditContext="_editContext" OnValidSubmit="HandleValidSubmit">
+    <FluentValidationValidator />
+
+    @ChildContent
+
+    <div class="vypr-btnset vypr-app-btnset">
+        @if (WaitingOnResponse)
+        {
+            <RadzenButton ButtonType="Radzen.ButtonType.Submit" Image="_content/VyprCore.RazorComponents/images/loaders/vypr-button-spinner.svg" Disabled=@true Visible=@(!ShowButtonsBindTo) ButtonStyle="Radzen.ButtonStyle.Secondary" Text=@SubmitText class="vypr-btn btn-processing" />
+        }
+        else
+        {
+            <RadzenButton ButtonType="Radzen.ButtonType.Submit" Visible=@(!ShowButtonsBindTo) ButtonStyle="Radzen.ButtonStyle.Primary" Disabled=@DisableSubmit Text=@SubmitText class="vypr-btn" />
+        }
+        @if (ShowResetButton)
+        {
+            <RadzenButton ButtonType="Radzen.ButtonType.Reset" Visible=@(!ShowButtonsBindTo) ButtonStyle="Radzen.ButtonStyle.Secondary" Text="Reset" @bind-Disabled=@WaitingOnResponse class="vypr-btn" />
+        }
+    </div>
+</EditForm>

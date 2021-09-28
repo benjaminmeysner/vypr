@@ -1,0 +1,21 @@
+﻿@layout Client.Areas.Main.Shared.MainLayout
+@inherits LayoutComponentBase
+
+<CascadingValue Value="this">
+    <div class="page-container">
+        <div class="page-title">
+            <h2>@_pageTitle</h2>
+            <div class="page-title-breadcrumbs">
+                <ul>
+                    <li>@_applicationName</li>
+                    @if (!(_breadCrumbs is null))
+                    { @foreach (var crumb in _breadCrumbs)
+                    { <li> @crumb </li>} }
+                </ul>
+            </div>
+        </div>
+        <div class="page-content">
+            @Body
+        </div>
+    </div>
+</CascadingValue>

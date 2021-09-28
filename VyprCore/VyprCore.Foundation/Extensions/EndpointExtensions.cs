@@ -1,0 +1,62 @@
+﻿// <copyright file="EndpointExtensions.cs" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+namespace VyprCore.Foundation.Extensions
+{
+    using Microsoft.AspNetCore.Routing;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.Extensions.DependencyInjection;
+    using VyprCore.Foundation.Identity.Controller;
+    using VyprCore.Foundation.Roles.Controller;
+    using VyprCore.Foundation.Miscellaneous.Controllers;
+    using VyprCore.Foundation.Identity.Fido.Controllers;
+
+    /// <summary>
+    /// Extensions for endpoints.
+    /// </summary>
+    public static class EndpointExtensions
+    {
+        /// <summary>
+        /// Adds the foundation routes.
+        /// </summary>
+        /// <param name="IEndpointRouteBuilder">The i endpoint route builder.</param>
+        /// <returns></returns>
+        public static void AddFoundationRoutes(this IEndpointRouteBuilder endpoint)
+        {
+            // very important to tag .RequireAuthorization("TenantPolicy") on any routes
+
+            endpoint.MapControllerRoute(
+               name: "accountmanagement",
+               pattern: "account/manage/{action}/{Id?}",
+               // This presumes the app has a controller called AccountManageController 
+               // which inherits BaseAccountManageController. It doesn't seem to pickup
+               // routes on the inheritted controllers.
+               defaults: new { controller = "AccountManage" })
+               .RequireAuthorization("TenantPolicy");
+
+            endpoint.MapControllerRoute(
+               name: "api",
+               pattern: "api/{controller}/{action}/{Id?}")
+               .RequireAuthorization("TenantPolicy");
+        }
+
+        /// <summary>
+        /// Adds the foundation controllers.
+        /// </summary>
+        /// <param name="service">The service.</param>
+        public static void AddFoundationControllers(this IServiceCollection service)
+        {
+            service.AddControllers()
+                .SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest)
+                .AddApplicationPart(typeof(AccountController).Assembly)
+                .AddApplicationPart(typeof(AccountManageController).Assembly)
+                .AddApplicationPart(typeof(AdminManageController).Assembly)
+                .AddApplicationPart(typeof(ConfigurationApiController).Assembly)
+                .AddApplicationPart(typeof(VyprRolesApiController).Assembly)
+                .AddApplicationPart(typeof(VyprRoleClaimsApiController).Assembly)
+                .AddApplicationPart(typeof(UtilitiesController).Assembly)
+                .AddApplicationPart(typeof(WebAuthnApiController).Assembly);
+        }
+    }
+}

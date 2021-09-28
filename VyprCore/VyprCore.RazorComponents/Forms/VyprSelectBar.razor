@@ -1,0 +1,11 @@
+﻿@inherits VyprCore.RazorComponents.Base.VyprComponentBase
+@using Radzen.Blazor
+@using Radzen
+
+@typeparam TValue
+
+<RadzenSelectBar class=@GetClass() @bind-Value=@Value TValue=@TValue Multiple=@Multiple Change=@(x => OnChange(x))>
+    <Items>
+        @ChildContent
+    </Items>
+</RadzenSelectBar>

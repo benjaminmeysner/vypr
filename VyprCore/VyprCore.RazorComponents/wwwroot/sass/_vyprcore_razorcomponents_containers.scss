@@ -1,0 +1,64 @@
+// <copyright file="_razorcomponents_containers.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+@import "_vyprcore_razorcomponents_vars.scss";
+
+.vypr-overlay {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 3;
+    background-color: #3a474d;
+    opacity: 0.5;
+}
+
+.vypr-crud-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vypr-crud-grid-partial {
+    width: 50%;
+}
+
+.vypr-crud-grid-full {
+    width: 100%;
+}
+
+.vypr-crud-flyout {
+    width: 48%;
+    margin-left: 20px;
+    border-bottom-right-radius: $RadzenDefaultBorderRadius;
+    border-bottom-left-radius: $RadzenDefaultBorderRadius;
+}
+
+.vypr-crud-closeflyout {
+    display: flex;
+    position: absolute;
+    right: 0;
+    justify-content: flex-end;
+
+    &.m {
+        right: 1.5rem;
+    }
+}
+
+.vypr-tab-content {
+    position: relative;
+}
+
+.vypr-code-snippet {
+    background: #ffffff;
+    overflow: auto;
+    width: auto;
+    border: 1px solid #e0e4e7;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.vypr-splitter-pane {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

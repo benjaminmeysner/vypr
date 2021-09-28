@@ -1,0 +1,15 @@
+﻿@typeparam TModel
+@typeparam TValue
+
+@inherits VyprCore.RazorComponents.Base.VyprFormComponentBase<TValue>
+
+@using Radzen
+@using Radzen.Blazor
+
+<div class="vypr-rz-componentwrapper">
+    <div class="vypr-rz-componentcol-lg">
+        @LabelRenderTree
+        <Radzen.Blazor.RadzenDropDown id=@ComponentId Change=@Change Name=@ComponentId Placeholder=@Placeholder Disabled=@IsReadOnly Visible=@IsVisible AllowFiltering=@AllowFiltering FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" @bind-Value=@Value AllowClear=@AllowClear TValue="TValue" Data=@DataSource TextProperty=@DisplayProperty Template=@Template ValueProperty=@ValueProperty Style="width: 100% !important; min-width: 0 !important;">
+        </Radzen.Blazor.RadzenDropDown>
+    </div>
+</div>

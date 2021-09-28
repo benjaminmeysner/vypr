@@ -1,0 +1,33 @@
+﻿@page "/view/settings/user"
+
+@layout Client.Areas.Main.Shared.MainPageContentLayout
+
+@using VyprCore.RazorComponents.PageElements 
+
+<div class="user-management-cards">
+    <ul>
+        <li><VyprMiniCard TValue="int" @ref=@_totalUsersCard Icon="group" Title="Total Users"/></li>
+        <li><VyprMiniCard TValue="int" Icon="sensors" Value=59 Title="Users Online"/></li>
+        <li><VyprMiniCard TValue="int" Icon="person_add" Value=1 Title="New Users"/></li>
+    </ul>
+</div>
+<div class="user-management-content">
+    <VyprCore.RazorComponents.Containers.VyprSplitter>
+        <VyprCore.RazorComponents.Containers.VyprSplitterPane>
+            <div class="user-management-grid">
+                <div class="user-management-grid-actions">
+                    <UsersGridActions />
+                </div>
+                <UsersGrid @ref=@_usersGrid SelectedEntitiesChanged=@(x => OnUserSelected(x[0])) />
+            </div>
+        </VyprCore.RazorComponents.Containers.VyprSplitterPane>
+         @if (_launchUserPane)
+         {
+            <VyprCore.RazorComponents.Containers.VyprSplitterPane>
+                <div class="user-management-pane">
+                    <UsersGridPaneView />
+                </div>
+            </VyprCore.RazorComponents.Containers.VyprSplitterPane>
+         }
+    </VyprCore.RazorComponents.Containers.VyprSplitter>
+</div>

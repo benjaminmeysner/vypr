@@ -1,0 +1,90 @@
+﻿@font-face {
+  font-family: 'Manrope Regular';
+  src: url("../fonts/manrope/Manrope-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Manrope Thin';
+  src: url("../fonts/manrope/Manrope-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Manrope Bold';
+  src: url("../fonts/manrope/Manrope-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Manrope Semi-Bold';
+  src: url("../fonts/manrope/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons-Regular.woff) format("woff"); }
+
+@font-face {
+  font-family: 'Material Icons Round';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/MaterialIcons-Round.woff) format("woff"); }
+
+.vypr-datagrid-exportoptions,
+.vypr-datagrid-crudoptions {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-left: 1px solid #dadfe2;
+  border-right: 2px solid #ededed;
+  display: flex;
+  justify-content: flex-end;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1.5rem;
+  background: #e6eeef; }
+  .vypr-datagrid-exportoptions button,
+  .vypr-datagrid-crudoptions button {
+    margin-top: 1.5rem; }
+
+.vypr-datagrid-checkbox,
+.vypr-datagrid-identityvalue {
+  display: flex;
+  justify-content: center; }
+
+.vypr-datagrid-identityvalue {
+  border: 1px dotted silver;
+  border-radius: 2px;
+  padding-left: 4px;
+  padding-right: 4px; }
+
+.vypr-datagrid-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px; }
+
+.vypr-edit-col i,
+.vypr-delete-col i,
+.vypr-edit-inprogress-col i {
+  padding-left: 50px;
+  padding-right: 50px; }
+
+.vypr-edit-col .rzi,
+.vypr-delete-col .rzi,
+.vypr-edit-inprogress-col .rzi {
+  font-size: 1.65rem; }
+
+.vypr-datagrid-pagerfooter {
+  display: flex;
+  flex: 0 1 auto;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  justify-content: flex-end;
+  font-size: 10pt; }
+
+.vypr-datagrid-pagerfootersection {
+  margin-right: 5px; }

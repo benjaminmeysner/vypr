@@ -1,0 +1,12 @@
+﻿@inherits RazorComponents.Base.VyprButtonBase
+
+@using Radzen.Blazor
+
+@if (WaitingOnResponse)
+{
+    <RadzenButton ButtonType="Radzen.ButtonType.Button" Image="_content/VyprCore.RazorComponents/images/loaders/vypr-button-spinner.svg" Style=@($"") ButtonStyle="Radzen.ButtonStyle.Secondary" Disabled=@true Click="OnClick" Text=@Text Icon=@Icon class=@($"vypr-btn {@Class}")  />
+}
+else
+{
+    <RadzenButton ButtonType="Radzen.ButtonType.Button" Style=@($"") ButtonStyle="Radzen.ButtonStyle.Info" Disabled=@Disabled Click="OnClick" Text=@Text Icon=@Icon class=@($"vypr-btn {@Class}")  />
+}

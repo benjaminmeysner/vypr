@@ -1,0 +1,17 @@
+﻿@typeparam TModel
+
+@using Radzen
+@using Radzen.Blazor
+
+@inherits VyprCore.RazorComponents.Base.VyprDataGridColumnBase<TModel>
+
+<RadzenDataGridColumn CssClass="vypr-delete-col" TItem=@TModel Context="order" Filterable="false" Sortable="false" TextAlign="TextAlign.Center" Width="70px">
+	<Template Context="data">
+		<VyprCore.RazorComponents.PageElements.VyprIcon Click=@(args => InternalOnRowDeleteAsync(data)) Icon="delete" />
+	</Template>
+	<EditTemplate Context="data">
+        <div class="vypr-edit-inprogress-col">
+		    <VyprCore.RazorComponents.PageElements.VyprIcon Click=@(args => InternalOnRowDeleteAsync(data)) Icon="delete" />
+        </div>
+	</EditTemplate>
+</RadzenDataGridColumn>

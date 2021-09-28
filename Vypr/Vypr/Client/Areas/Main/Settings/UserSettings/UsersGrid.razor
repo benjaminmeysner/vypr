@@ -1,0 +1,15 @@
+﻿@using VyprCore.Models.ViewModels
+@using VyprCore.RazorComponents.Base
+@using VyprCore.RazorComponents.DataGrid
+@using VyprCore.Models.Resources 
+
+@inherits VyprEntityDataGridBase<VyprUserViewModel>
+
+<VyprDataGrid @ref=@_internalGrid LoadData=@LoadData EmptyText=@StandardText.NoUsers AllowSorting="true" AllowFiltering="true" AllowPaging="true" TModel=@VyprUserViewModel DataSource=@_entities Count=@_entityCount InLineStyle=@_cssGridWidth SelectionMode=@VyprDataGridSelectionMode.Single @bind-SelectedRowModels=@SelectedEntities>
+    <VyprDataGridIdentityColumn TModel="VyprUserViewModel" Property="Id" Title="Id" Width="75px" />
+    <VyprDataGridColumn TModel="VyprUserViewModel" Property="Email" Title="Email" Filterable="true" Sortable="true" />
+    <VyprDataGridColumn TModel="VyprUserViewModel" Property="UserName" Title="UserName" Filterable="true" Sortable="true" />
+    <VyprDataGridColumn TModel="VyprUserViewModel" Property="FirstName" Title="First Name" Filterable="true" Sortable="true" />
+    <VyprDataGridColumn TModel="VyprUserViewModel" Property="LastName" Title="Last Name" Sortable="true" SortProperty="LastName" />
+    <VyprDataGridBoolColumn TModel="VyprUserViewModel" Property="Active" Title="Active" Filterable="true" Sortable="true" Width="100px" />
+</VyprDataGrid>

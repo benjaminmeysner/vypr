@@ -1,0 +1,45 @@
+﻿// <copyright file="vypr_settings_usermanagement.scss" company="Vypr Systems" >
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright >
+
+@import "vypr_vars.scss";
+
+.user-management-cards {
+    ul {
+        display: flex;
+        padding-left: 0;
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+
+    li:not(:last-child) {
+        margin-right: $StandardContentPadding;
+    }
+}
+
+.user-management-grid-actions {
+    // We will just force these a width so they dont collapse down
+    .vypr-grid-actions .vypr-btn {
+        background: transparent;
+        color: #0b51b7;
+        width: 177px;
+    }
+}
+
+.user-management-content {
+    display: flex;
+    flex-direction: row;
+
+    .rz-splitter-horizontal > .rz-splitter-bar {
+        margin-top: $StandardContentPadding;
+    }
+}
+
+.user-management-pane {
+    margin-top: $StandardContentPadding;
+}
+.user-management-pane-view-summary {
+    padding: $StandardContentPadding;
+    border: 1px solid $VyprMainBorderColour;
+    border-radius: $StandardBorderRadius;
+}

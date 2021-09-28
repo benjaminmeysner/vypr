@@ -1,0 +1,242 @@
+﻿// <copyright file="vypr_app.scss" company="Vypr Systems" >
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright >
+
+@import url('../css/open-iconic/font/css/open-iconic-bootstrap.min.css');
+
+@import "vypr_vars.scss";
+@import "vypr_fonts.scss";
+@import "vypr_layout.scss";
+@import "vypr_framework_overrides.scss";
+
+@import "vypr_settings_usermanagement.scss";
+
+// #
+// Has customisable properties per customer.
+html, body  {
+    margin: 0;
+    height: 100%;
+    font-size: $RootFontSize;
+    color: $VyprMainBodyFontColour;
+    font-family: 'Source Sans Pro Reg', sans-serif;
+}
+
+div#app {
+    height: 100%;
+}
+
+// #
+// Has customisable properties per customer.
+body:not(.rz-default-scrollbars)::-webkit-scrollbar-thumb,
+app:not(.rz-default-scrollbars)::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #d8dcdd;
+    background-clip: padding-box;
+    border: 4px solid rgba(0, 0, 0, 0);
+}
+
+// #
+// Has customisable properties per customer.
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, 
+h7,
+button {
+    margin-bottom: 0;
+    font-family: 'Source Sans Pro Bold', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    border: 1px solid $VyprLightGrey;
+    background: $VyprLightGrey;
+}
+
+p {
+    line-height: 1.8;
+}
+
+a {
+    color: $VyprLinkColour;
+
+    &:hover {
+        color: $VyprLinkHover;
+        text-decoration: none;
+    }
+}
+
+// #
+// Has customisable properties per customer.
+// Framework button overrides.
+.vypr-btn {
+    font-size: 1.25rem;
+    i {
+        font-size: 1.5rem !important;
+    }
+    &.vypr-primary-btn {
+        background: $VyprGreen; // !
+    }
+
+    &.vypr-secondary-btn {
+        background: #b4b4b4; // !
+    }
+}
+
+.brand-logo-container {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    text-align: -webkit-center;
+    // #
+    // Has customisable properties per customer.
+    .brand-logo {
+        width: 100%;
+        height: 0;
+        max-width: 150px;
+        padding-top: 18.64%;
+        background-color: #fff;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-image: url(/images/bms/bms_company-logo.png); // !
+    }
+}
+
+// #
+// Has customisable properties per customer.
+.vypr-spinner {
+    // Should be like BMS Green!
+    filter: hue-rotate( 25deg ) brightness(71%) saturate(61%); // !
+    -webkit-filter: hue-rotate( 25deg ) brightness(71%) saturate(61%); // !
+
+    &.inline {
+        position: relative;
+        text-align: center;
+    }
+
+    &.trip-loader {
+        position: relative;
+        text-align: center;
+        margin-top: 75px;
+        margin-bottom: 75px;
+
+        > img {
+            margin-left: -15px; // center is as its 60px;
+        }
+    }
+
+    &.image-loader {
+        position: relative;
+        text-align: center;
+        margin-top: 3.5rem;
+        margin-bottom: 0.5rem;
+
+        > img {
+            margin-left: -15px; // center is as its 60px;
+        }
+    }
+}
+
+// #
+// Has customisable properties per customer.
+.vypr-auth-page {
+    .vypr-app-login,
+    .vypr-app-fp,
+    .vypr-app-cp,
+    .vypr-app-rp,
+    .vypr-app-ir,
+    .vypr-app-icp {
+        background: white; // !
+        border-radius: 4px;
+        padding: $StandardContentPadding;
+    }
+    // #
+    // Has customisable properties per customer.
+    .vypr-inv-cr-link,
+    .vypr-app-btnset {
+        button, [type=submit] {
+            width: 100%;
+            margin-left: 0;
+            background: $VyprGreen; // !
+        }
+    }
+}
+
+.validation-message.success {
+    color: $VyprAqua;
+}
+
+// Other stuff
+div.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+div.go-back {
+    position: absolute;
+    left: $StandardContentPadding;
+
+    .go-back-icon {
+        cursor: pointer;
+        padding: $StandardContentPadding;
+
+        &::after {
+            content: 'Back';
+            font-size: 1.2rem;
+            font-family: 'Source Sans Pro Bold', sans-serif;
+        }
+    }
+}
+
+.noselect {
+    @include NoSelect;
+}
+
+.invalid {
+    outline: 1px solid #ff477b;
+}
+
+.input-validation-error {
+    border: 1px solid #ff477b;
+    background-color: #ffeeee;
+}
+
+ul.vypr-validation-results {
+    margin-top: $StandardMargin;
+    
+    &.counteract-ver {
+        padding-top: 0 !important;
+        padding-bottom: $StandardMargin;
+    }
+
+    &.activesummary {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0rem;
+        margin-bottom: -$StandardMargin;
+    }
+}
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#blazor-error-ui .dismiss {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}

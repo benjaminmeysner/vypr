@@ -1,0 +1,85 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+    <UserSecretsId>e80a3c9b-37b0-4e24-810f-bee184d949a4</UserSecretsId>
+    <Nullable>annotations</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Context\**" />
+    <Compile Remove="wwwroot\fonts\fonts\**" />
+    <Content Remove="Context\**" />
+    <Content Remove="wwwroot\fonts\fonts\**" />
+    <EmbeddedResource Remove="Context\**" />
+    <EmbeddedResource Remove="wwwroot\fonts\fonts\**" />
+    <None Remove="Context\**" />
+    <None Remove="wwwroot\fonts\fonts\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+    <Content Remove="wwwroot\sass\vypr_app.scss" />
+    <Content Remove="wwwroot\sass\vypr_vars.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="wwwroot\css\app.css" />
+    <_ContentIncludedByDefault Remove="wwwroot\css\app.min.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="..\..\..\VyprCore\VyprCore.ClientFoundation\Pages\Login.razor" Link="Areas\Login.razor">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Page>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\sass\vypr_vars.scss" />
+    <None Include="wwwroot\sass\vypr_app.scss">
+      <Generator>SassTranspiler</Generator>
+      <LastGenOutput>vypr_app.css</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Blazored.LocalStorage" Version="4.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.5" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="5.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\VyprCore\VyprCore.Client\VyprCore.Client.csproj" />
+    <ProjectReference Include="..\..\..\VyprCore\VyprCore.Interfaces\VyprCore.Interfaces.csproj" />
+    <ProjectReference Include="..\..\..\VyprCore\VyprCore.Models\VyprCore.Models.csproj" />
+    <ProjectReference Include="..\..\..\VyprCore\VyprCore.RazorComponents\VyprCore.RazorComponents.csproj" />
+    <ProjectReference Include="..\..\..\VyprCore\VyprCore.Utilities\VyprCore.Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Pages\Admin\Users - Copy.razor.cs">
+      <DependentUpon>Users.razor.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Pages\Admin\Users - Copy.razor.cs.rej">
+      <DependentUpon>Users.razor.cs.rej</DependentUpon>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\sass\vypr_app.css">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>vypr_app.scss</DependentUpon>
+    </Content>
+  </ItemGroup>
+
+</Project>

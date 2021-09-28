@@ -1,0 +1,19 @@
+﻿@typeparam TModel
+
+@using Radzen
+@using Radzen.Blazor
+
+@inherits VyprCore.RazorComponents.Base.VyprDataGridColumnBase<TModel>
+
+<RadzenDataGridColumn TItem="TModel" Property="@Property" Title="@Title" Width=@Width Sortable="@Sortable" Filterable="@Filterable" SortProperty="@SortProperty" FilterProperty="@FilterProperty">
+	<Template Context="data">
+		@if (GetBoolValueOfProperty(data))
+				{
+  <RadzenIcon Icon="check_circle" Style="color: #3db70b;" />
+		}
+				else
+				{
+  <RadzenIcon Icon="highlight_off" Style="color: #ec4f59;" />
+		}
+	</Template>
+</RadzenDataGridColumn>

@@ -1,0 +1,14 @@
+﻿// <copyright file="_razorcomponents_notifications.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+@import "_vyprcore_razorcomponents_vars.scss";
+
+.vypr-success-response {
+    padding: 1.5rem;
+    color: #69c45e;
+    border: 1px solid #69c45e;
+    margin-top: $ComponentSpacing;
+    margin-bottom: $ComponentSpacing;
+    border-radius: $RadzenDefaultBorderRadius;
+}

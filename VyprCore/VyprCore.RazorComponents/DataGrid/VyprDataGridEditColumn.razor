@@ -1,0 +1,18 @@
+﻿@typeparam TModel
+
+@using Radzen
+@using Radzen.Blazor
+
+@inherits VyprCore.RazorComponents.Base.VyprDataGridColumnBase<TModel>
+
+<RadzenDataGridColumn CssClass="vypr-edit-col" TItem=@TModel Filterable="false" Sortable="false" TextAlign="TextAlign.Center" Width="70px">
+	<Template Context="data">
+		<VyprCore.RazorComponents.PageElements.VyprIcon Click=@(args => InternalOnRowEditAsync(data)) Icon="mode_edit" />
+	</Template>
+	<EditTemplate Context="data">
+        <div class="vypr-edit-inprogress-col">
+            <VyprCore.RazorComponents.PageElements.VyprIcon Click=@(args => InternalOnRowSaveEditAsync(data)) Icon="save" />
+            <VyprCore.RazorComponents.PageElements.VyprIcon Click=@(args => InternalOnRowCancelEditAsync(data)) Icon="cancel" />
+        </div>
+	</EditTemplate>
+</RadzenDataGridColumn>

@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+
+@inherits VyprCore.RazorComponents.Base.VyprComponentBase
+
+<div class="vypr-fileupload @Class">
+    @if (Multiple)
+    {
+        <InputFile type="file" id=@_componentId class="vypr-inputfile" multiple OnChange=@OnFileChangeAsync accept=@Accept />
+    }
+    else
+    {
+        <InputFile type="file" id=@_componentId class="vypr-inputfile" OnChange=@OnFileChangeAsync accept=@Accept />
+    }
+    <label for=@_componentId>
+        @if (!ButtonOnly)
+        {
+            <span class=@(Required && !FilesSelected ? "vypr-filebox vypr-invalid-field" : "vypr-filebox")>@_fileName</span>
+        }
+        <span class=@(!ButtonOnly ? "vypr-filebutton" : "vypr-filebutton vypr-filebutton-stretch")>
+            <VyprIcon Icon=@Icon />
+            @if (!string.IsNullOrEmpty(Text))
+            {
+                <span class="vypr-filebutton-text">@Text</span>
+            }
+        </span>
+    </label>
+</div>
+

@@ -1,0 +1,63 @@
+﻿@layout VyprLoginLandingLayout
+
+@attribute [Route(RelativePath)]
+
+@using Microsoft.AspNetCore.Components.Forms
+@using Radzen.Blazor
+@using VyprCore.RazorComponents.Containers
+@using VyprCore.RazorComponents.Forms
+@using VyprCore.RazorComponents.Loaders
+@using VyprCore.RazorComponents.Layouts
+@using VyprCore.Models.ViewModels
+@using System.Net.Http
+@using Microsoft.AspNetCore.Components.Web
+
+@inherits VyprCore.RazorComponents.Base.VyprPageBase
+
+@if (_useWebAuthnMethod)
+{
+    <VyprForm TModel=@LoginWithWebAuthnViewModel Model=@_webAuthnModel SubmitText="Continue" ShowResetButton=@false @bind-WaitingOnResponse=@WaitingOnResponse OnValidSubmit=@OnProcessWebAuthnLoginAsync Class="vypr-login vypr-app-login">
+        @if (!string.IsNullOrEmpty(Response))
+        {
+            <VyprValidationResults>
+                <VyprValidationResult Success="@false">@Response</VyprValidationResult>
+            </VyprValidationResults>
+        }
+
+        <div class="vypr-login-inputs vypr-app-login-inputs">
+            <VyprTextBox @bind-Value=@_webAuthnModel.UserName IsReadOnly=@WaitingOnResponse Placeholder="e.g. example@email.com" Class=@(!string.IsNullOrEmpty(Response) ? "vypr-invalid-field" : "") />
+            <ValidationMessage For="@(() => _webAuthnModel.UserName)" />
+        </div>
+    </VyprForm>
+}
+else
+{
+    <VyprForm TModel=@LoginWithPasswordViewModel Model=@_passwordModel SubmitText="Login" ShowResetButton=@false @bind-WaitingOnResponse=@WaitingOnResponse OnValidSubmit=@OnProcessLoginAsync Class="vypr-login vypr-app-login">
+        @if (!string.IsNullOrEmpty(Response))
+        {
+            <VyprValidationResults>
+                <VyprValidationResult Success="@false">@Response</VyprValidationResult>
+            </VyprValidationResults>
+        }
+
+        <div class="vypr-login-inputs vypr-app-login-inputs">
+            <VyprTextBox @bind-Value=@_passwordModel.UserName IsReadOnly=@WaitingOnResponse Placeholder="e.g. example@email.com" Class=@(!string.IsNullOrEmpty(Response) ? "vypr-invalid-field" : "") />
+            <ValidationMessage style="error" For="@(() => _passwordModel.UserName)" />
+
+            <VyprTextBox @bind-Value=@_passwordModel.Password IsReadOnly=@WaitingOnResponse Placeholder="********" UsePasswordMask=@true Class=@(!string.IsNullOrEmpty(Response) ? "vypr-invalid-field" : "") />
+            <ValidationMessage style="error" For="@(() => _passwordModel.Password)" />
+        </div>
+    </VyprForm>
+}
+
+<div class="vypr-loginlandinglinks vypr-app-landing-links">
+    @if (_useWebAuthnMethod)
+    {
+        <a @onclick=@(() => NavigationManager.NavigateTo($"/login?ReturnUrl={_returnUrl}&U_WebAuthn=false", true))>Password login</a>
+    }
+    else
+    {
+        <a @onclick=@(() => NavigationManager.NavigateTo($"/login?ReturnUrl={_returnUrl}&U_WebAuthn=true", true))>Device login</a>
+    }
+    <a href=@(_useWebAuthnMethod ? $"/forgotpassword?ReturnUrl={_returnUrl}&U_WebAuthn={_useWebAuthnMethod}" : "/forgotpassword")>Forgot password?</a>
+</div>

@@ -1,0 +1,9 @@
+﻿@using Radzen.Blazor
+
+@inherits VyprCore.RazorComponents.Base.VyprContainerBase
+
+<RadzenTabs class=@(Stretch ? "vypr-stretchtabs" : "") Visible=@Visible @bind-SelectedIndex=@SelectedIndex>
+    <Tabs>
+        @ChildContent
+    </Tabs>
+</RadzenTabs>

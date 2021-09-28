@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Ninjas In Pyjamas</title> <!-- This get's overridden in the style load -->
+    <base href="/" />
+    <link id="tenant-manifest" rel="manifest" />
+    <link rel="apple-touch-icon" sizes="512x512" href="icon-512.png" />
+    <!--
+        Global re-usable styles, from RCL Library, Individually scoped components
+        styles/static web assets are included in by default.
+    -->
+    <link href="_content/VyprCore.RazorComponents/css/_vyprcore_razorcomponents.min.css" rel="stylesheet" />
+    <link href="css/app.min.css" rel="stylesheet" />
+    <link href="_content/Mobsites.Blazor.SignaturePad/bundle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.min.css" />
+</head>
+
+<body>
+    <div id="vypr_app">
+        <!-- Show spinner instead of Loading...-->
+        <div class="vypr-page-spinner"></div>
+    </div>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        navigator.serviceWorker.register('service-worker.js', { scope: '/' });
+    </script>
+
+    <!--
+        Custom JS Scripts
+    -->
+    <script src="_content/VyprCore.RazorComponents/js/_vyprcore_razorcomponents.js"></script>
+    <script src="_content/VyprCore.RazorComponents/js/_vyprcore_razorcomponents_webauthn.js"></script>
+    <script src="_content/VyprCore.RazorComponents/js/_vyprcore_razorcomponents_radzen.js"></script>
+    <script src="_content/Mobsites.Blazor.SignaturePad/bundle.js"></script>
+</body>
+
+</html>

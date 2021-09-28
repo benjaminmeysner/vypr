@@ -1,0 +1,51 @@
+﻿// <copyright file="vypr_vars.scss" company="Vypr Systems" >
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright >
+
+// Global vars
+$RootFontSize: 14px;
+$PrimaryBlue: #2873fb;
+$StandardContentPadding: 1.5rem;
+$StandardMargin: 1rem;
+$StandardBorderRadius: 4px;
+$HalfSecondTransition: 0.5s;
+$TopRowHeight: 4.5rem;
+$TextAreaHeight: 100px;
+
+$VyprMidnightBlue: #0b51b7; // Menu bar
+$VyprMidnightBlue2: #202634; // Main background
+$VyprMainBodyFontColour: #303e67;
+$VyprMainBorderColour: #eeeeef;
+$VyprSecondaryFontColour: #b6c2e4;
+$VyprTooltipBackground: #0ba7b7;
+$VyprOffWhite: #fbfbfb;
+$VyprMutedTextColour: #9cb9ff;
+
+$VyprLinkColour: #2e5292;
+$VyprLinkHover: #374e76;
+
+$VyprGreen: #d2f02e;
+$VyprRed: #cb493b;
+$VyprGrey: #9eb8b7;
+$VyprLightGrey: #9cb9ff;
+$VyprDarkGrey: #353535;
+$VyprAqua: #469ea6;
+$RejectedRed: #ff4a4a;
+
+@mixin BMSButtonBorderRadius {
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+@mixin NoSelect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently */
+}
+
+$PhotoWidth: 100%;
+$PhotoHeight: 240px;
+$PhotoThumbWidth: 160px;
+$PhotoThumbHeight: 120px;

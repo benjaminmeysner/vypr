@@ -1,0 +1,141 @@
+﻿// <copyright file="_razorcomponents_elements.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+@import "_vyprcore_razorcomponents_vars.scss";
+@import "_vyprcore_razorcomponents_mixins.scss";
+
+.vypr-profiledisplay {
+    display: flex;
+    align-items: center;
+    color: #4e4e4e;
+}
+
+.vypr-icircle {
+    color: $AvatarColour;
+    background-color: $AvatarBackground;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50%;
+    height: $AvatarSize;
+    text-align: center;
+    width: $AvatarSize;
+    user-select: none;
+    padding-top: 3px; // Sits a couple of pixels too high.
+}
+
+.vypr-initials {
+    font-size: calc($AvatarSize / 2); /* 50% of parent */
+    line-height: 1;
+    position: relative;
+    top: calc($AvatarSize / 4); /* 25% of parent */
+}
+
+span.profile-username {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+span.vypr-cloud-online {
+    color: $CloudOnline;
+}
+
+span.vypr-cloud-offline {
+    color: $CloudOffline;
+}
+
+.vypr-icon {
+    position: relative;
+}
+
+.vypr-text-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.vypr-errorcontainer {
+    padding: 1.5rem;
+    border-radius: $RadzenDefaultBorderRadius;
+    border: 1px solid silver;
+    @include CenterVertAndHor;
+
+    hr {
+        height: 1px;
+        border: none;
+        color: #000;
+        background-color: #dedede;
+    }
+}
+
+.landing-footer {
+    bottom: 0;
+    margin-top: 1rem;
+    text-align: center;
+    border: 0 !important;
+}
+
+.vypr-fileupload {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+
+    label {
+        width: 100%;
+        line-height: 3rem;
+        cursor: pointer;
+    }
+
+    .vypr-inputfile {
+        display: none;
+    }
+
+    .vypr-filebox {
+        display: inline-block;
+        width: 100%;
+        border-radius: 4px;
+        background: #f6f6f6;
+        padding: 5px 0 5px 5px;
+        box-sizing: border-box;
+        overflow-wrap: word;
+        overflow-wrap: anywhere;
+        padding: 5px 4.5rem 5px 1rem; // 3rem (icon width) + 1rem padding.
+    }
+
+    .vypr-filebutton {
+        top: 0;
+        right: 0;
+        font-size: 1.5rem;
+        position: absolute;
+        background: #3a4468;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: -moz-available;
+        height: -webkit-fill-available;
+        height: fill-available;
+        border-top-right-radius: $RadzenDefaultBorderRadius;
+        border-bottom-right-radius: $RadzenDefaultBorderRadius;
+
+        &:hover {
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.1)));
+            background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+            -webkit-box-shadow: inset 0 -3px 0 0 #ffffff33;
+            box-shadow: inset 0 -3px 0 0 #ffffff33;
+        }
+    }
+
+    .vypr-filebutton-stretch {
+        width: 100%;
+        height: 3.5rem;
+        border-radius: 4px;
+        font-family: 'Hind Siliguri Bold', sans-serif;
+
+        span.vypr-filebutton-text {
+            font-size: 16px;
+            padding-left: 10px;
+        }
+    }
+}

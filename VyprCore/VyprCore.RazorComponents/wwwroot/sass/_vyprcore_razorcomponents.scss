@@ -1,0 +1,139 @@
+﻿// <copyright file="_razorcomponents_global.scss" company="Vypr Systems">
+// Copyright (c) Vypr Systems. All rights reserved.
+// </copyright>
+
+// Include the 3rd party Radzen theme for the components
+@import "../css/_radzen_default.css";
+
+@import "_vyprcore_razorcomponents_vars.scss";
+@import "_vyprcore_razorcomponents_auth.scss";
+@import "_vyprcore_razorcomponents_loaders.scss";
+@import "_vyprcore_razorcomponents_mixins.scss";
+@import "_vyprcore_razorcomponents_buttons.scss";
+@import "_vyprcore_razorcomponents_textbox.scss";
+@import "_vyprcore_razorcomponents_fieldset.scss";
+@import "_vyprcore_razorcomponents_layouts.scss";
+@import "_vyprcore_razorcomponents_elements.scss";
+@import "_vyprcore_razorcomponents_containers.scss";
+@import "_vyprcore_razorcomponents_notifications.scss";
+@import "_vyprcore_razorcomponents_datagrid.scss";
+
+// Finally override any radzen stylings
+@import "_vyprcore_radzen_overrides.scss";
+
+html, body {
+    margin: 0;
+    font-family: 'Manrope Regular', sans-serif;
+}
+
+h4,
+h5,
+h6 {
+    margin-bottom: 0.75rem;
+}
+
+.vypr-form {
+    width: 100%;
+    margin-top: $ComponentSpacing;
+    margin-bottom: $ComponentSpacing;
+
+    ul[class^="validation-errors"],
+    ul[class^="vypr-validation-results"] {
+        list-style: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-top: 1rem;
+
+        li.error:before {
+            font-size: $IconSize;
+            margin-right: 0.65rem;
+            vertical-align: middle;
+            content: "\e001"; /* This uses material icons, which is bought in by Radzen  */
+            font-family: 'Material Icons';
+        }
+
+        li.success:before {
+            font-size: $IconSize;
+            margin-right: 0.65rem;
+            vertical-align: middle;
+            content: "\e86c"; /* This uses material icons, which is bought in by Radzen  */
+            font-family: 'Material Icons';
+        }
+    }
+}
+
+.vypr-rz-componentcol-lg {
+    width: 100%;
+    position: relative;
+    padding-right: $ComponentSpacing;
+    padding-left: $ComponentSpacing;
+}
+
+.vypr-rz-componentwrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: $ComponentSpacing;
+    margin-right: -$ComponentSpacing;
+    margin-left: -$ComponentSpacing;
+    // Specifically only target s1 core components
+    // labels
+    .vypr-rz-componentlabel > h5 {
+        margin-top: 0;
+    }
+
+    input {
+        height: $InputHeight;
+        width: $InputWidth;
+    }
+}
+
+.vypr-rcomp-val-text {
+    position: absolute;
+}
+
+.vypr-rz-componentrequired {
+    color: $InputRequiredColour;
+    margin-left: $InputRequiredSpacing;
+    margin-right: $InputRequiredSpacing;
+
+    &:after {
+        content: "*";
+    }
+}
+
+div[id^='VyprDatePicker'] {
+    width: 100%;
+}
+
+// Certain Radzen controls wrapper around the inputs or construct the
+// component using divs instead. So we need to target the correct elements.
+// Ie. DatePicker is wrapped around by a div by Radzen.
+.vypr-invalid-field:not([id^='VyprDatePicker']):not([id^='VyprCheckBox']),
+.vypr-invalid-field:hover:not(focus):not([id^='VyprDatePicker']):not([id^='VyprCheckBox']) {
+    @include InvalidInputOutline;
+}
+
+.vypr-invalid-field[id^='VyprheckBox'],
+.vypr-invalid-field[id^='VyprDatePicker'],
+.vypr-invalid-field[id^='VyprDatePicker']:hover:not(focus),
+.vypr-invalid-field[id^='VyprCheckBox']:hover:not(focus) {
+    input,
+    .rz-chkbox-box {
+        @include InvalidInputOutline;
+    }
+}
+
+.vypr-valid-field {
+    // We won't show any border for valid inputs.
+    //border: 1px solid $InputValidColour;
+}
+
+.vypr-checkgreen {
+    color: $InputValidColour;
+}
+
+.vypr-checkred {
+    color: $InputInvalidColour;
+}

@@ -1,0 +1,6 @@
+﻿@inherits VyprCore.RazorComponents.Base.VyprComponentBase
+
+@using Radzen.Blazor
+@using Radzen
+
+<RadzenGoogleMapMarker Title=@Title Label=@Label Position=@(new GoogleMapPosition() { Lat = @Position.Lat, Lng = @Position.Lng }) />

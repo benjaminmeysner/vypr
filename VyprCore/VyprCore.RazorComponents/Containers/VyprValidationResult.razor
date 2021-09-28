@@ -1,0 +1,5 @@
+﻿@inherits VyprCore.RazorComponents.Base.VyprContainerBase
+
+<li class=@(Success ? "validation-message success" : "validation-message error")>
+    <VyprTextContent Class="@Class">@ChildContent</VyprTextContent>
+</li>

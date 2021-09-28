@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Attributes\**" />
+    <Compile Remove="BaseClasses\**" />
+    <Compile Remove="Base\Context\**" />
+    <Compile Remove="Identity\Fido\Components\**" />
+    <Compile Remove="Service\**" />
+    <Compile Remove="WeatherForecast\**" />
+    <EmbeddedResource Remove="Attributes\**" />
+    <EmbeddedResource Remove="BaseClasses\**" />
+    <EmbeddedResource Remove="Base\Context\**" />
+    <EmbeddedResource Remove="Identity\Fido\Components\**" />
+    <EmbeddedResource Remove="Service\**" />
+    <EmbeddedResource Remove="WeatherForecast\**" />
+    <None Remove="Attributes\**" />
+    <None Remove="BaseClasses\**" />
+    <None Remove="Base\Context\**" />
+    <None Remove="Identity\Fido\Components\**" />
+    <None Remove="Service\**" />
+    <None Remove="WeatherForecast\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="Blazored.LocalStorage" Version="4.1.2" />
+    <PackageReference Include="Fido2" Version="2.0.2" />
+    <PackageReference Include="IdentityServer4.EntityFramework.Storage" Version="4.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.6" />
+    <PackageReference Include="MimeKit" Version="2.12.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.2.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VyprCore.Client\VyprCore.Client.csproj" />
+    <ProjectReference Include="..\VyprCore.Logging\VyprCore.Logging.csproj" />
+    <ProjectReference Include="..\VyprCore.Models\VyprCore.Models.csproj" />
+    <ProjectReference Include="..\VyprCore.Utilities\VyprCore.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

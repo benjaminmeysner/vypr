@@ -1,0 +1,24 @@
+﻿@inherits RazorComponents.Base.VyprLoaderBase
+
+@if (ShowSpinner)
+{
+    @if (Overlay)
+    {
+        <style type="text/css">
+            body {
+                overflow: hidden;
+            }
+        </style>
+        <div class="vypr-overlay">
+            <div class="vypr-spinner @(Class)">
+                <img src="_content/VyprCore.RazorComponents/images/loaders/vypr-page-spinner-overlay.svg" />
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="vypr-spinner @(Class)">
+            <img src="_content/VyprCore.RazorComponents/images/loaders/vypr-page-spinner.svg" />
+        </div>
+    }
+}

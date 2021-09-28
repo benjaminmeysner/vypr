@@ -1,0 +1,7 @@
+﻿@inherits VyprCore.RazorComponents.Base.VyprComponentBase
+@using Radzen.Blazor.Rendering;
+
+<div style="@Style" aria-valuemax="@Max" aria-valuemin="0" role="progressbar" class="rz-progressbar rz-progressbar-determinate" aria-valuenow="@Value" id=@_componentId>
+    <div class="rz-progressbar-value rz-progressbar-value-animate" style="@($"width: {Math.Min(Value / Max * 100, 100).ToInvariantString()}%;")"></div>
+    <div class="rz-progressbar-label">@Value / @Max</div>
+</div>
